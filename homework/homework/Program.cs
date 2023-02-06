@@ -4,38 +4,22 @@ int num = int.Parse(Console.ReadLine());
 switch (num)
 {
     case 1:
-        Console.WriteLine("зима");
-        break;
     case 2:
-        Console.WriteLine("зима");
-        break;
     case 3:
         Console.WriteLine("зима");
         break;
     case 4:
-        Console.WriteLine("весна");
-        break;
     case 5:
-        Console.WriteLine("весна");
-        break;
     case 6:
         Console.WriteLine("весна");
         break;
     case 7:
-        Console.WriteLine("лето");
-        break;
     case 8:
-        Console.WriteLine("лето");
-        break;
     case 9:
         Console.WriteLine("лето");
         break;
     case 10:
-        Console.WriteLine("осень");
-        break;
-    case 11:
-        Console.WriteLine("осень");
-        break;
+    case 11:    
     case 12:
         Console.WriteLine("осень");
         break;
