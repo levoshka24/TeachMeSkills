@@ -47,7 +47,7 @@ switch (l)
     case 6:
         Console.WriteLine("Введите число из которого вы хотите получить корень");
         int u = int.Parse(Console.ReadLine());
-        Console.WriteLine($"Результат: {Math.Abs(u)}");
+        Console.WriteLine($"Результат: {Math.Pow(u,2)}");
         break;
     default:
         Console.WriteLine("что то не то ввели");
