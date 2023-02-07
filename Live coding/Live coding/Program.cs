@@ -1,5 +1,5 @@
-﻿int k = int.Parse(Console.ReadLine());
-for(int i = -1 * k; i <= k; i++)
-{
-    Console.WriteLine(Math.Pow(i,2));
-}
+﻿
+double[] l = new double[3] { 1.1, 1.1, 1.1 };
+l[0] = 2.7;
+l[1] = 2.7;
+l[2] = 2.7;
