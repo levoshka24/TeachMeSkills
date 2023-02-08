@@ -98,43 +98,143 @@
 //Console.WriteLine($"Минимально число: {c}");
 //Console.WriteLine($"Среднее чисел массива: {d}");
 //TASK 3
-Console.WriteLine("Введите размерность  1 массива");
-int n = int.Parse(Console.ReadLine());
-Console.WriteLine("---------------------------");
-int[] arr1 = new int[n];
-Random rnd1 = new Random();
-double count1 = 0;
-for(int i = 0; i < n; i++)
-{
-    arr1[i] = rnd1.Next(1,40);
-    Console.WriteLine(arr1[i]);
-    count1 += arr1[i];
-}
-double mid1 = count1 / arr1.Length;
-Console.WriteLine($"Среднее арифм эл 1 массива: {mid1}");
-Console.WriteLine("Введите размерность  2 массива");
-int n2 = int.Parse(Console.ReadLine());
-Console.WriteLine("---------------------------");
-double count2 = 0;
-int[] arr2 = new int[n2];
-Random rnd2 = new Random();
-for (int i = 0; i < n; i++)
-{
-    arr2[i] = rnd2.Next(1, 40);
-    Console.WriteLine(arr2[i]);
-    count2+=arr2[i];
-}
-double mid2 = count2 / arr2.Length;
-Console.WriteLine($"Среднее арифм эл 1 массива: {mid2}");
-if (mid1 == mid2)
-{
-    Console.WriteLine("среднии равны");
-}
-if(mid1 > mid2)
-{
-    Console.WriteLine("среднее 1 больше среднего 2");
-}
-else
-{
-    Console.WriteLine("среднее 2 больше среднего 1");
-}
+//Console.WriteLine("Введите размерность  1 массива");
+//int n = int.Parse(Console.ReadLine());
+//Console.WriteLine("---------------------------");
+//int[] arr1 = new int[n];
+//Random rnd1 = new Random();
+//double count1 = 0;
+//for(int i = 0; i < n; i++)
+//{
+//    arr1[i] = rnd1.Next(1,40);
+//    Console.WriteLine(arr1[i]);
+//    count1 += arr1[i];
+//}
+//double mid1 = count1 / arr1.Length;
+//Console.WriteLine($"Среднее арифм эл 1 массива: {mid1}");
+//Console.WriteLine("Введите размерность  2 массива");
+//int n2 = int.Parse(Console.ReadLine());
+//Console.WriteLine("---------------------------");
+//double count2 = 0;
+//int[] arr2 = new int[n2];
+//Random rnd2 = new Random();
+//for (int i = 0; i < n; i++)
+//{
+//    arr2[i] = rnd2.Next(1, 40);
+//    Console.WriteLine(arr2[i]);
+//    count2+=arr2[i];
+//}
+//double mid2 = count2 / arr2.Length;
+//Console.WriteLine($"Среднее арифм эл 1 массива: {mid2}");
+//if (mid1 == mid2)
+//{
+//    Console.WriteLine("среднии равны");
+//}
+//if(mid1 > mid2)
+//{
+//    Console.WriteLine("среднее 1 больше среднего 2");
+//}
+//else
+//{
+//    Console.WriteLine("среднее 2 больше среднего 1");
+//}
+// DOP TASK
+// TASK 1
+//int first = 0, second = 1, third = 0;
+//Console.Write("Enter a number : ");
+//var n = Convert.ToInt32(Console.ReadLine());
+//Console.Write("First {0} Fibonacci numbers {1} {2} ", n, first, second);
+
+//for (int i = 3; i <= n; i++)
+//{
+//    third = first + second;
+//    Console.Write("{0} ", third);
+//    first = second;
+//    second = third;
+//}
+// TASK 2
+//Console.WriteLine("Введите сумму вклада");
+//decimal money = decimal.Parse(Console.ReadLine());
+//Console.WriteLine("Введите период");
+//int period = int.Parse(Console.ReadLine());
+//for(int i = 0; i < period; i++)
+//{
+//    money += money * 0.07M;
+//}
+//Console.WriteLine($"по итогу вы получите {money}");
+// TASK 4
+//int num;
+//Console.WriteLine("Введите значение");
+//while (!int.TryParse(Console.ReadLine(), out num))
+//    Console.WriteLine("Ошибка ввода, попробуйте снова");
+//Console.WriteLine("---------------------");
+//if (num > 5 || num < 5 || num == 10)
+//{
+//    int[] l = new int[num];
+//    Random rnd = new Random();
+//    for(int i = 0; i < num; i++)
+//    {
+//        l[i] = rnd.Next(1,10);
+//        Console.WriteLine(l[i]);
+//    }
+
+//}
+//else
+//{
+//    goto 
+//}
+//for (; ; )
+//{
+//    int n = int.Parse(Console.ReadLine());
+//    if (n>5 || n<5 || n == 10)
+//    {
+
+//        break;
+//    }
+//    Console.WriteLine("Ошибка");
+
+
+
+//}
+
+//int[] l = new int[n];
+//Random rnd = new Random();
+//for (int i = 0; i < n; i++)
+//{
+//    l[i] = rnd.Next(15);
+//    Console.WriteLine(l[i]);
+//}
+// TASK 6
+//string[] l = new string[5] { "kate", "max", "mike", "anton", "viktor" };
+//Array.Sort(l);
+//foreach(var c in l)
+//{
+//    Console.WriteLine(c);
+//}
+//// TASK 7
+//Console.WriteLine("введите размерность массива");
+//int n = int.Parse(Console.ReadLine());
+//int[] l = new int[n];
+
+//Console.WriteLine("--------------");
+//for (int i = 0; i < n; i++)
+//{
+//    l[i] = int.Parse(Console.ReadLine());
+//}
+//for(int i = 1; i < n; i++)
+//{
+//    for(int j = 0; j < n-i; j++)
+//    {
+//        if (l[j+1] > l[j])
+//        {
+//            int t = l[j];
+//            l[j] = l[j + 1];
+//            l[j + 1] = t;
+//        }
+//    }
+//}
+//Console.WriteLine("------------");
+//for(int i = 0; i < n; i++)
+//{
+//    Console.WriteLine(l[i]);
+//}
