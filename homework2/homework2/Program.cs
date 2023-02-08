@@ -163,47 +163,44 @@
 //}
 //Console.WriteLine($"по итогу вы получите {money}");
 // TASK 4
-//int num;
-//Console.WriteLine("Введите значение");
-//while (!int.TryParse(Console.ReadLine(), out num))
-//    Console.WriteLine("Ошибка ввода, попробуйте снова");
-//Console.WriteLine("---------------------");
-//if (num > 5 || num < 5 || num == 10)
+//int n;
+//do
 //{
-//    int[] l = new int[num];
-//    Random rnd = new Random();
-//    for(int i = 0; i < num; i++)
-//    {
-//        l[i] = rnd.Next(1,10);
-//        Console.WriteLine(l[i]);
-//    }
-
-//}
-//else
-//{
-//    goto 
-//}
-//for (; ; )
-//{
-//    int n = int.Parse(Console.ReadLine());
-//    if (n>5 || n<5 || n == 10)
-//    {
-
-//        break;
-//    }
-//    Console.WriteLine("Ошибка");
-
-
-
-//}
-
+//    Console.WriteLine("Введите ");
+//    Int32.TryParse(Console.ReadLine(), out n);
+//} while (n<5|| n==10);
 //int[] l = new int[n];
-//Random rnd = new Random();
+
+//Console.WriteLine("--------------");
 //for (int i = 0; i < n; i++)
 //{
-//    l[i] = rnd.Next(15);
-//    Console.WriteLine(l[i]);
+//    l[i] = int.Parse(Console.ReadLine());
 //}
+//Console.WriteLine("-----------------");
+//int[] l1 = Array.FindAll(l, elements => elements % 2 == 0);
+//foreach(var c in l1)
+//{
+//    Console.WriteLine(c);
+//}
+// TASK 5
+Console.WriteLine("введите размерность массива");
+int n = int.Parse(Console.ReadLine());
+int[] l = new int[n];
+
+Console.WriteLine("--------------");
+for (int i = 0; i < n; i++)
+{
+    l[i] = int.Parse(Console.ReadLine());
+}
+Console.WriteLine("-----------------");
+for (int i = 0; i <= n; i++)
+{
+    if(i%2 != 0)
+    {
+        l[i] = 0;
+    }
+    Console.WriteLine(l[i]);
+}
 // TASK 6
 //string[] l = new string[5] { "kate", "max", "mike", "anton", "viktor" };
 //Array.Sort(l);
@@ -211,7 +208,7 @@
 //{
 //    Console.WriteLine(c);
 //}
-//// TASK 7
+// TASK 7
 //Console.WriteLine("введите размерность массива");
 //int n = int.Parse(Console.ReadLine());
 //int[] l = new int[n];
