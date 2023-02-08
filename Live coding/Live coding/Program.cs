@@ -1,5 +1,7 @@
-﻿
-double[] l = new double[3] { 1.1, 1.1, 1.1 };
-l[0] = 2.7;
-l[1] = 2.7;
-l[2] = 2.7;
+﻿for(int i = 0; i < 7; i++)
+{
+    for(int j= 0; j < 7; j++)
+    {
+        Console.Write(j);
+    }
+}
