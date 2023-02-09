@@ -183,24 +183,24 @@
 //    Console.WriteLine(c);
 //}
 // TASK 5
-Console.WriteLine("введите размерность массива");
-int n = int.Parse(Console.ReadLine());
-int[] l = new int[n];
+//Console.WriteLine("введите размерность массива");
+//int n = int.Parse(Console.ReadLine());
+//int[] l = new int[n];
 
-Console.WriteLine("--------------");
-for (int i = 0; i < n; i++)
-{
-    l[i] = int.Parse(Console.ReadLine());
-}
-Console.WriteLine("-----------------");
-for (int i = 0; i <= n; i++)
-{
-    if(i%2 != 0)
-    {
-        l[i] = 0;
-    }
-    Console.WriteLine(l[i]);
-}
+//Console.WriteLine("--------------");
+//for (int i = 0; i < n; i++)
+//{
+//    l[i] = int.Parse(Console.ReadLine());
+//}
+//Console.WriteLine("-----------------");
+//for (int i = 0; i <= n; i++)
+//{
+//    if(i%2 != 0)
+//    {
+//        l[i] = 0;
+//    }
+//    Console.WriteLine(l[i]);
+//}
 // TASK 6
 //string[] l = new string[5] { "kate", "max", "mike", "anton", "viktor" };
 //Array.Sort(l);
