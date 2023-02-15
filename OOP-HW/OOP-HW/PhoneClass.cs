@@ -16,7 +16,17 @@ namespace OOP_HW
             weight = weightInit;
             model = modelInit;
         }
+        public void RecieveCall(string name,out string res)
+        {
+             res = string.Format($"Звонит-{name}");
+        }
+        public int GetNumberOfRecieveCall(int numberOfperson)
+        {
+            return numberOfperson;
+        }
 
-        
+
     }
+    
 }
+
