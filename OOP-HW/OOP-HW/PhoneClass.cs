@@ -24,8 +24,8 @@ namespace OOP_HW
         {
             return numberOfperson;
         }
-
-
+        
+        
     }
     
 }

@@ -8,7 +8,7 @@
 //int n, k;
 //Console.WriteLine("Введите сумму");
 //n = int.Parse(Console.ReadLine());
-//k = 64;
+//int k = 64;
 //Console.WriteLine("Найкратчайшее количство купюр которое вам надо будет отдать");
 //while (n > 0)
 //{
@@ -21,7 +21,7 @@
 
 //    }
 //}
-int q1, q2, q8, q32, q64,q16,q4;
+int q1, q2, q8, q32, q64, q16, q4;
 q1 = q2 = q4 = q8 = q16 = q32 = q64 = 0;
 int n = int.Parse(Console.ReadLine());
 while (n > 0)
@@ -47,7 +47,7 @@ Console.WriteLine($"по 8 - {q8}");
 Console.WriteLine($"по 4 - {q4}");
 Console.WriteLine($"по 2 - {q2}");
 Console.WriteLine($"по 1 - {q1}");
-///
+
 /// 
 /// 13 Дано число R и массив размера N. Найти два различных элемента
 //массива, сумма которых наиболее близка к числу R, и вывести эти элементы
