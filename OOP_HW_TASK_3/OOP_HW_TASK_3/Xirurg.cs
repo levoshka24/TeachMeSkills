@@ -6,7 +6,11 @@ using System.Threading.Tasks;
 
 namespace OOP_HW_TASK_3
 {
-    internal class Xirurg
+    public class Xirurg:Doctor
     {
+        public override void Treat()
+        {
+            Console.WriteLine("вам придеться орезать лишнее");
+        }
     }
 }

@@ -21,3 +21,8 @@ Phone phone_3 = new Phone(5049595,"huawei");
 Console.WriteLine($"3 телефон: Номер - {phone_3.number},  Модель - {phone_3.model}");
 phone_3.RecieveCall("nikita");
 phone_3.GetNumber(100203020);
+Phone phone_4 = new Phone();
+phone_4.number = 44030340;
+phone_4.model = "samsung";
+phone_4.weight = 5.6;
+

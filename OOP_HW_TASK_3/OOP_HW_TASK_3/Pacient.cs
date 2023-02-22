@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace OOP_HW_TASK_3
 {
-    public class Pacient:Plan_sick
+    public class Pacient:
     {
         public string name { get; set; } 
         public string weight { get; set; }

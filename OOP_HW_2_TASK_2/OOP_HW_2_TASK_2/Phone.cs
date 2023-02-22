@@ -11,11 +11,15 @@ namespace OOP_HW_2_TASK_2
         public ulong number { get; set; } 
         public string model { get; set; } 
         public double weight { get; set; } 
-        public Phone(double weightInit, string modelInit, ulong numberInit)
+        public Phone()
+        {
+
+        }
+        public Phone(double weightInit, string modelInit, ulong numberInit):this( numberInit,  modelInit)
         {
             weight = weightInit;
-            model = modelInit;
-            number = numberInit;
+            
+            
         }
         public Phone(ulong numberInit, string modelInit)
         {
@@ -43,5 +47,6 @@ namespace OOP_HW_2_TASK_2
             }
             
         }
+        
     }
 }
