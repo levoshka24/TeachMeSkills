@@ -12,6 +12,7 @@ namespace Task3
         public override long NumberOfDocument { get; set; }
         public int KolvoOfProduct { get; set; }
         public override DateTime DateOfDocument { get; set; }
+        
         public override void MakeContract()
         {
             Console.WriteLine("Введите номер документа:");
