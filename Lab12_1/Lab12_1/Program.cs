@@ -5,100 +5,110 @@
 ////Создать метод, возвращающий все отрицательные элементы, используя
 ////предыдущий метод.
 ////Создать метод, меняющий местами первую и вторую половины массива. 
-internal class Program
-{
-    static int FirstMinEl(int index, double[] arr)
-    {
-        for (int i = index; i < arr.Length; i++)
-        {
-            if (arr[i] < 0)
-            {
-                return i;
-            }
-        }
-        return -1;
-    }
+//internal class Program
+//{
+//    static double[] Input()
+//    {
+//        Console.WriteLine("введите размерность массива");
+//        int n = Convert.ToInt32(Console.ReadLine());
+//        double[] mass = new double[n];
+//        Console.WriteLine("введите сам массив");
+//        for(int i = 0; i < n; i++)
+//        {
+//            mass[i] = Convert.ToInt32(Console.ReadLine());
+//        }
+//        return mass;
+//    }
+//    static void OutPut(double[] a)
+//    {
+//        for(int i = 0; i < a.Length; i++)
+//        {
+//            Console.Write(a[i]+ " ");
+//        }
+//    }
+//    static int FirstMinEl(int index, double[] arr)
+//    {
+        
+//        for (int i = index; i < arr.Length; i++)
+//        {
+//            if (arr[i] < 0)
+//            {
+//                return i;
+//            }
+//        }
+//        return -1;
+//    }
 
-    static double[] AllMin(double[] arr)
-    {
-        double[] result = new double[arr.Length];
-        double[] el = { };
-        int i = 0, n = 0;
-        i = FirstMinEl(i, arr);
-        if (i == -1)
-        {
-            return el;
-        }
-        while (i != -1)
-        {
-            result[n] = arr[i];
-            i = FirstMinEl(i + 1, arr);
-            n++;
-        }
-        double[] res = new double[n];
-        for (i = 0; i < n; i++)
-        {
-            res[i] = result[i];
-        }
-        return res;
-    }
+//    static double[] AllMin(double[] arr)
+//    {
+//        double[] result = new double[arr.Length];
+//        double[] el = { };
+//        int i = 0, n = 0;
+//        i = FirstMinEl(i, arr);
+//        if (i == -1)
+//        {
+//            return el;
+//        }
+//        while (i != -1)
+//        {
+//            result[n] = arr[i];
+//            i = FirstMinEl(i + 1, arr);
+//            n++;
+//        }
+//        double[] res = new double[n];
+//        for (i = 0; i < n; i++)
+//        {
+//            res[i] = result[i];
+//        }
+//        return res;
+//    }
 
-    static void SwapHalfs(double[] arr)
-    {
-        for (int i = 0; i < arr.Length / 2; i++)
-        {
-            if (arr.Length % 2 != 0)
-            {
-                (arr[i], arr[arr.Length / 2 + i + 1]) = (arr[arr.Length / 2 + i + 1], arr[i]);
-            }
-            else
-            {
-                (arr[i], arr[arr.Length / 2 + i]) = (arr[arr.Length / 2 + i], arr[i]);
-            }
-        }
-    }
+//    static void SwapHalfs(double[] arr)
+//    {
+//        for (int i = 0; i < arr.Length / 2; i++)
+//        {
+//            if (arr.Length % 2 != 0)
+//            {
+//                (arr[i], arr[arr.Length / 2 + i + 1]) = (arr[arr.Length / 2 + i + 1], arr[i]);
+//            }
+//            else
+//            {
+//                (arr[i], arr[arr.Length / 2 + i]) = (arr[arr.Length / 2 + i], arr[i]);
+//            }
+//        }
+//    }
 
-    private static void Main(string[] args)
-    {
-        Console.WriteLine("Введите размер массива:");
-        int n = int.Parse(Console.ReadLine());
-        double[] arr = new double[n];
-        Console.WriteLine("Введите сам массив:");
-        for (int i = 0; i < n; i++)
-        {
-            arr[i] = double.Parse(Console.ReadLine());
-        }
-        Console.WriteLine("Введите индекс с какого искать индекс первого отрицательного");
-        int index = Convert.ToInt32(Console.ReadLine());
-        int firstminindex = FirstMinEl(index, arr);
-        Console.WriteLine($"Индекс первого отриц - {firstminindex}");
-        double[] all = AllMin(arr);
-        if (all.Length == 0)
-        {
-            Console.WriteLine("Отрицательных элементов нет");
-        }
-        else
-        {
-            int i = FirstMinEl(0, arr);
-            for (int x = 0; x < all.Length - 1; x++)
-            {
-                i = FirstMinEl(i + 1, arr);
-            }
-            Console.WriteLine("Все элементы после последнего отрицательного:");
-            for (int x = i + 1; x < n; x++)
-            {
-                Console.Write($"{arr[x]} ");
-            }
-            Console.WriteLine();
-        }
-        SwapHalfs(arr);
-        Console.WriteLine("Массив, в котором половины поменяли местами:");
-        for (int i = 0; i < n; i++)
-        {
-            Console.Write($"{arr[i]} ");
-        }
-    }
-}
+//    private static void Main(string[] args)
+//    {
+//        double[] arr = Input();
+        
+//        Console.WriteLine("Введите индекс с какого искать индекс первого отрицательного");
+//        int index = Convert.ToInt32(Console.ReadLine());
+//        int firstminindex = FirstMinEl(index, arr);
+//        Console.WriteLine($"Индекс первого отриц - {firstminindex}");
+//        double[] all = AllMin(arr);
+//        if (all.Length == 0)
+//        {
+//            Console.WriteLine("Отрицательных элементов нет");
+//        }
+//        else
+//        {
+//            int i = FirstMinEl(0, arr);
+//            for (int x = 0; x < all.Length - 1; x++)
+//            {
+//                i = FirstMinEl(i + 1, arr);
+//            }
+//            Console.WriteLine("Все элементы после последнего отрицательного:");
+//            for (int x = i + 1; x < arr.Length; x++)
+//            {
+//                Console.Write($"{arr[x]} ");
+//            }
+//            Console.WriteLine();
+//        }
+//        SwapHalfs(arr);
+//        OutPut(arr);
+//    }
+//}
 /////Вариант 3
 //static int[,] Input2()
 //{
