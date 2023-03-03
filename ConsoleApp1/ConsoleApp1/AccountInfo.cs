@@ -19,21 +19,7 @@ namespace ConsoleApp1
         }
         public int AccountId { get { return accountId; } set { accountId = value; } }
         public char AccountType { get { return accounttype; } set { accounttype = value; } }
-        public decimal Deposit
-        {
-            get { return deposit; }
-            set
-            {
-                if (deposit > 0)
-                {
-                    deposit = value;
-                }
-                else
-                {
-                    Console.WriteLine("вы ввели отрицательную сумму");
-                }
-            }
-        }
+        public decimal Deposit { get { return deposit; } set { deposit = value; } }
         public string Name { get { return name; } set { name = value; } }
     }
 }
