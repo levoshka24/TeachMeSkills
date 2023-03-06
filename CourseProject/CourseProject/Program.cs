@@ -1,6 +1,8 @@
 ﻿using CourseProject;
 using System.Transactions;
+
 int opt;
+Class_User user = new Class_User();
 do
 {
     Console.Write("\n\tОсновное меню");
@@ -18,7 +20,12 @@ do
             }
         case (int)Options.User:
             {
-                
+                Console.WriteLine("login");
+                string login = Console.ReadLine();
+                Console.WriteLine("password");
+                string password = Console.ReadLine();
+                user.Entrance(login, password);
+
                 break;
             }
     }
