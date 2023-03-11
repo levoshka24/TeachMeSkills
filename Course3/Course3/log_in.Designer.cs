@@ -31,6 +31,7 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(log_in));
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.label3 = new System.Windows.Forms.Label();
             this.buttonClear = new System.Windows.Forms.Button();
             this.buttonEnter = new System.Windows.Forms.Button();
             this.linkLabel = new System.Windows.Forms.LinkLabel();
@@ -56,11 +57,22 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.Tan;
+            this.panel1.Controls.Add(this.label3);
             this.panel1.Controls.Add(this.buttonClear);
             this.panel1.Location = new System.Drawing.Point(160, 14);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(347, 93);
             this.panel1.TabIndex = 3;
+            // 
+            // label3
+            // 
+            this.label3.BackColor = System.Drawing.Color.Chocolate;
+            this.label3.Location = new System.Drawing.Point(35, 21);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(135, 16);
+            this.label3.TabIndex = 8;
+            this.label3.Text = "Вход";
+            this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // buttonClear
             // 
@@ -71,6 +83,7 @@
             this.buttonClear.Size = new System.Drawing.Size(71, 70);
             this.buttonClear.TabIndex = 7;
             this.buttonClear.UseVisualStyleBackColor = false;
+            this.buttonClear.Click += new System.EventHandler(this.buttonClear_Click);
             // 
             // buttonEnter
             // 
@@ -93,6 +106,7 @@
             this.linkLabel.TabIndex = 15;
             this.linkLabel.TabStop = true;
             this.linkLabel.Text = "Еще не создали аккаунт?";
+            this.linkLabel.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel_LinkClicked);
             // 
             // textBox_login
             // 
@@ -163,5 +177,6 @@
         private System.Windows.Forms.TextBox textBox_password;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label3;
     }
 }

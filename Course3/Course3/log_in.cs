@@ -38,7 +38,7 @@ namespace Course3
             SqlCommand comand = new SqlCommand(querystring, database.getConnection());
             adapter.SelectCommand = comand;
             adapter.Fill(table);
-            if (table.Rows.Count == 1)
+            if (table.Rows.Count == 2)
             {
                 MessageBox.Show("Вы успешно вошли", "Успешно", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 Form1 frm1 = new Form1();
@@ -50,6 +50,24 @@ namespace Course3
             {
                 MessageBox.Show(" Такого аккаунта не существует", "Неуспешно", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void linkLabel_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            sign_up frm_sign = new sign_up();
+            frm_sign.Show();
+            this.Hide();
+        }
+
+        private void buttonClear_Click(object sender, EventArgs e)
+        {
+            textBox_login.Text = "";
+            textBox_password.Text = "";
         }
     }
 }
