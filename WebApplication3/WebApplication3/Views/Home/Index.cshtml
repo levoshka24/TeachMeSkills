@@ -1,0 +1,23 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Welcome</h1>
+    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+</div>
+@functions
+{
+    public int Multiply(int x, int y, int z, int g) => x*y*z*g;
+}
+<div>
+    <p>Multiply = <b>@Multiply(5,3,4,6)</b></p>
+</div>
+<div>@ViewData["One"]</div>
+<div>@ViewData["One1"]</div>
+<div>@ViewData["One2"]</div>
+@model string[]
+@foreach(var c in Model)
+{
+    <p>@c</p>
+}
