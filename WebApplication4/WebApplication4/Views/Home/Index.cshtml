@@ -1,0 +1,29 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+@model ProductClass[]
+<h2>Products</h2>
+<table class="table">
+    <tr>
+        <td>Id</td>
+        <td>Name</td>
+        <td>Count</td>
+        <td>Country</td>
+        <td>Category</td>
+    </tr>
+    @foreach(var p in Model)
+    {
+        <tr>
+            <td>@p.Id</td>
+            <td>@p.Name</td>
+            <td>@p.Count</td>
+            <td>@p.Country</td>
+            <td>@p.Category</td>
+        </tr>
+    }
+</table>
+
+<div class="text-center">
+    <h1 class="display-4">Welcome</h1>
+    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+</div>

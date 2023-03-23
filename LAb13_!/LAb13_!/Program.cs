@@ -24,13 +24,35 @@
 //{
 //    Console.WriteLine("строка не симметрична");
 //}
+//TASK 1.0
+//using System.Text;
+//Console.WriteLine("input strkou");
+//string str = Console.ReadLine();
+//char[] arr = str.ToCharArray();
+//Array.Reverse(arr);
+//string s2 = new string(arr);
+//string stroka = null;
+//StringBuilder sb = new StringBuilder(stroka);
+//sb.Append(s2);
+//sb.ToString();
+//if (sb.Equals(str))
+//{
+//    Console.WriteLine("symmetric");
+//}
+//else
+//{
+//    Console.WriteLine("no symmetric");
+
+//}
+
 //TASK 2
-using System.Text.RegularExpressions;
-Console.WriteLine("input stroku");
-string s = Console.ReadLine();
-string digits = Regex.Replace(s, @"\D", "");
-Console.WriteLine("Количество цифр:");
-Console.WriteLine(digits.Length);
+//using System.Text.RegularExpressions;
+//Console.WriteLine("input stroku");
+//string s = Console.ReadLine();
+// заменяет любую строку на пробел тем самым новая строка и выводим длинну получаю кол-во цифр в строке
+//string digits = Regex.Replace(s, @"\D", "");
+//Console.WriteLine("Количество цифр:");
+//Console.WriteLine(digits.Length);
 // TASK 2.0
 //Console.WriteLine("input stroku");
 //string s = Console.ReadLine();

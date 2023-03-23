@@ -28,9 +28,10 @@ namespace HW.Controllers
         [HttpPost]
         public IActionResult Form(string username, string password)
         {
+            string userName = "s1mple";
+            string passwordp = "sasha";
             
-            
-            if (username.Equals(password))
+            if (username.Equals(userName)&& password.Equals(passwordp))
             {
                 return RedirectToAction("Index", "Home");
             }
