@@ -23,9 +23,25 @@ static Treugolnik InputPoint()
 }
 static bool IsRavnobedr(Treugolnik treug)
 {
-    double a = Math.Sqrt(Math.Pow(treug.a.X - treug.b.X, 2) - Math.Pow(treug.a.Y - treug.b.Y, 2));
-    double b = Math.Sqrt(Math.Pow(treug.b.X - treug.c.X, 2) - Math.Pow(treug.b.Y - treug.c.Y, 2));
-    double c = Math.Sqrt(Math.Pow(treug.a.X - treug.c.X, 2) - Math.Pow(treug.a.Y - treug.c.Y, 2));
+    double a = 0;
+    double b = 0;
+    double c = 0;
+    if (treug.a.X - treug.b.X != 0 || treug.a.Y - treug.b.Y != 0 || treug.b.X - treug.c.X != 0 || treug.b.Y - treug.c.Y != 0 || treug.a.X - treug.c.X != 0 || treug.a.Y - treug.c.Y != 0)
+    {
+
+
+        a = Math.Sqrt(Math.Pow(treug.a.X - treug.b.X, 2) - Math.Pow(treug.a.Y - treug.b.Y, 2));
+        b = Math.Sqrt(Math.Pow(treug.b.X - treug.c.X, 2) - Math.Pow(treug.b.Y - treug.c.Y, 2));
+        c = Math.Sqrt(Math.Pow(treug.a.X - treug.c.X, 2) - Math.Pow(treug.a.Y - treug.c.Y, 2));
+        
+        
+    }
+    else
+    {
+        Console.WriteLine("вы ввели некоректные данные,так как при вычитании координат сторон они дают нули");
+    }
+
+
     if (a == b || a == c || b == c)
     {
         return true;
@@ -136,9 +152,7 @@ do
                             Console.WriteLine(mass2[j].c.Y);
                             
                         }
-                        //var t = mass_of_students[j + 1];
-                        //mass_of_students[j + 1] = mass_of_students[j];
-                        //mass_of_students[j] = t;
+                        
                     }
                 }
             }
