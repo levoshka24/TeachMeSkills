@@ -13,6 +13,7 @@ double y2 = 0;
 double t = 1;
 double AbsoluteMistake;
 double RelativeMistake;
+
 int n = -1;
 if (xfinal < 1)
 {
@@ -54,7 +55,7 @@ if (xfinal < 1)
             count += 4;
             RelativeMistake = AbsoluteMistake / y;
             count += 2;
-            Console.WriteLine($"{Math.Round(x, 2)}      {Math.Round(y2, 5)}          {Math.Round(y, 5)}        {Math.Round(AbsoluteMistake, 5)}     {Math.Round(RelativeMistake, 5)}");
+            Console.WriteLine($"{Math.Round(x, 2)}      {Math.Round(y2, 5)}          {Math.Round(y, 5)}        {Math.Round(AbsoluteMistake, 5)}     {Math.Abs(Math.Round(RelativeMistake, 5))}");
 
         }
     }

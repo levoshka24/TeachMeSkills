@@ -26,7 +26,7 @@ static bool IsRavnobedr(Treugolnik treug)
     double a = Math.Sqrt(Math.Pow(treug.a.X - treug.b.X, 2) - Math.Pow(treug.a.Y - treug.b.Y, 2));
     double b = Math.Sqrt(Math.Pow(treug.b.X - treug.c.X, 2) - Math.Pow(treug.b.Y - treug.c.Y, 2));
     double c = Math.Sqrt(Math.Pow(treug.a.X - treug.c.X, 2) - Math.Pow(treug.a.Y - treug.c.Y, 2));
-    if (a == b || a == c || b == c && a!=0 && b!=0 && c!=0)
+    if (a == b || a == c || b == c)
     {
         return true;
     }
@@ -64,8 +64,8 @@ do
                 {
                     Console.WriteLine("треугольник неравнобедренный");
                 }
-                
-                
+
+
                 break;
             }
         case (int)Options.Massofravnob:
@@ -79,9 +79,9 @@ do
                 {
                     Console.WriteLine($"Треугольник - {counter}");
                     counter += 1;
-                    mass[i] = InputPoint();                           
+                    mass[i] = InputPoint();
                 }
-                for(int i = 0; i < n; i++)
+                for (int i = 0; i < n; i++)
                 {
                     bool c = IsRavnobedr(mass[i]);
                     if (c)
@@ -94,40 +94,59 @@ do
                         Console.WriteLine(mass[i].c.X);
                         Console.WriteLine(mass[i].c.Y);
                     }
+                    else
+                    {
+                        Console.WriteLine("все треугольники не равнобедренные");
+                    }
                 }
-                
-                
+
+
                 break;
             }
         case (int)Options.RavnKoord:
-            Console.Clear();
-            Console.WriteLine("введите число треугольников");
-            int n2 = Convert.ToInt32(Console.ReadLine());
-            Treugolnik[] mass2 = new Treugolnik[n2];
-            int counter2 = 1;
-            for (int i = 0; i < n2; i++)
             {
-                Console.WriteLine($"Треугольник - {counter2}");
-                counter2 += 1;
-                mass2[i] = InputPoint();
-            }
-            
-                for (int j = 0; j < n2; j++)
+                Console.Clear();
+                Console.WriteLine("введите число треугольников");
+                int n2 = Convert.ToInt32(Console.ReadLine());
+                Treugolnik[] mass2 = new Treugolnik[n2];
+                int counter2 = 1;
+                for (int i = 0; i < n2; i++)
                 {
-                    if (mass2[j].a.X != mass2[j + 1].a.X && mass2[j].a.Y != mass2[j + 1].a.Y && mass2[j].b.X != mass2[j + 1].b.X && mass2[j].b.Y != mass2[j + 1].b.Y && mass2[j].c.X != mass2[j + 1].c.X && mass2[j].c.Y != mass2[j + 1].c.Y)
+                    Console.WriteLine($"Треугольник - {counter2}");
+                    counter2 += 1;
+                    mass2[i] = InputPoint();
+                }
+
+                for (int i = 0; i < mass2.Length; i++)
+                {
+                    for (int j = 0; j < mass2.Length - 1; j++)
                     {
-                        Console.WriteLine("кординаты треугольника у которого нету общих точек с другими треугольниками");
-                        Console.WriteLine(mass2[j].a.X);
-                        Console.WriteLine(mass2[j].a.Y);
-                        Console.WriteLine(mass2[j].b.X);
-                        Console.WriteLine(mass2[j].b.Y);
-                        Console.WriteLine(mass2[j].c.X);
-                        Console.WriteLine(mass2[j].c.Y);
+                        if (mass2[j].a.X > mass2[j + 1].a.X & mass2[j].a.Y > mass2[j + 1].a.Y & mass2[j].b.X > mass2[j + 1].b.X & mass2[j].b.Y > mass2[j + 1].b.Y & mass2[j].c.X > mass2[j + 1].c.X & mass2[j].c.Y > mass2[j + 1].c.Y)
+                        {
+                            Console.WriteLine("-----------------------");
+                        }
+                        else
+                        {
+                          
+                            Console.WriteLine(mass2[j].a.X);
+                            Console.WriteLine(mass2[j].a.Y);
+                            Console.WriteLine(mass2[j].b.X);
+                            Console.WriteLine(mass2[j].b.Y);
+                            Console.WriteLine(mass2[j].c.X);
+                            Console.WriteLine(mass2[j].c.Y);
+                            
+                        }
+                        //var t = mass_of_students[j + 1];
+                        //mass_of_students[j + 1] = mass_of_students[j];
+                        //mass_of_students[j] = t;
                     }
                 }
-            
-
+            }
             break;
+            
+            
+           
+
     }
 } while (opt != (int)Options.Exit);
 

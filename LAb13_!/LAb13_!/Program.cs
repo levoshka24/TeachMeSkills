@@ -1,4 +1,4 @@
-﻿// TASK 1
+﻿//TASK 1
 //static bool IsSimetric(string s)
 //{
 //    char[] arr = s.ToCharArray();
@@ -18,7 +18,7 @@
 //bool res = IsSimetric(s);
 //if (res)
 //{
-//    Console.WriteLine("строка симметричная") ; 
+//    Console.WriteLine("строка симметричная");
 //}
 //else
 //{
@@ -49,7 +49,7 @@
 //using System.Text.RegularExpressions;
 //Console.WriteLine("input stroku");
 //string s = Console.ReadLine();
-// заменяет любую строку на пробел тем самым новая строка и выводим длинну получаю кол-во цифр в строке
+////заменяет любую строку на пробел тем самым новая строка и выводим длинну получаю кол-во цифр в строке
 //string digits = Regex.Replace(s, @"\D", "");
 //Console.WriteLine("Количество цифр:");
 //Console.WriteLine(digits.Length);
@@ -77,21 +77,24 @@
 //    }
 //}
 //Console.WriteLine("Самое короткое слово: " + parts[x]);
-// TASK 4
-//static string ReverseWord(string s)
-//{
-//    char[] arr = s.ToCharArray();
-//    Array.Reverse(arr);
-//    string s2 = new string(arr);
-//    return s2;
-//}
-//Console.WriteLine("введите строку");
-//var str = Console.ReadLine();
-//var arr = str.Split(new string[] { " " }, StringSplitOptions.RemoveEmptyEntries);
-//string s;
-//for (int i = arr.Length - 1; i >= 0; i--)
-//{
-//    s = ReverseWord(arr[i]);
-//    Console.Write(s + " ");
-//}
-//Console.ReadLine();
+//TASK 4
+static string ReverseWord(string s)
+{
+    char[] arr = s.ToCharArray();
+    Array.Reverse(arr);
+    string s2 = new string(arr);
+    return s2;
+}
+Console.WriteLine("введите строку");
+var str = Console.ReadLine();
+var arr = str.Split(new string[] { " " }, StringSplitOptions.RemoveEmptyEntries);
+string s;
+string s2= null;
+for (int i = arr.Length - 1; i >= 0; i--)
+{
+    s = ReverseWord(arr[i]);
+    s2 = s2 +s + " ";
+    //Console.Write(s + " ");
+}
+Console.WriteLine(s2);
+Console.ReadLine();
