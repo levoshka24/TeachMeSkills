@@ -1,7 +1,26 @@
 ﻿using lab_struct2;
 using System.ComponentModel;
 using System.Reflection;
-
+static void Output(Student stud)
+{
+    Console.WriteLine($"Фамилия - {stud.female}, Отметка по математике - {stud.mark_math}, Отметка по истории - {stud.mark_history}");
+}
+static Student Input()
+{
+    Student student = new Student();
+    Console.WriteLine("введите фамилию студента");
+    student.female = Console.ReadLine();
+    Console.WriteLine("Введите отметку по истории");
+    student.mark_history = int.Parse(Console.ReadLine());
+    Console.WriteLine("Введите отметку по математике");
+    student.mark_math = int.Parse(Console.ReadLine());
+    return student;
+}
+static double Srednball(Student stud)
+{
+    stud.sredniy_bal = (stud.mark_math + stud.mark_history) / 2;
+    return stud.sredniy_bal;
+}
 Console.WriteLine("введите количество студентов");
 int n = Convert.ToInt32(Console.ReadLine());
 Student[] mass_of_students = new Student[n];
@@ -10,13 +29,13 @@ int count1 = 1;
 for(int i = 0; i < mass_of_students.Length; i++)
 {
     Console.WriteLine($"Студент {count++}") ;
-    mass_of_students[i].Input();
+    mass_of_students[i] = Input();
 }
 Console.Clear();
 for (int i = 0; i < mass_of_students.Length; i++)
 {
     Console.WriteLine($"Студент {count1++}");
-    mass_of_students[i].Output();
+    Output(mass_of_students[i]);
    
 }
 Console.WriteLine("Студенты которые имеют двойки по предметам");
@@ -33,7 +52,7 @@ for (int i = 0; i < mass_of_students.Length; i++)
 }
 for(int i = 0; i < mass_of_students.Length; i++)
 {
-    mass_of_students[i].Srednball();
+    Srednball(mass_of_students[i]);
  
 }
 Console.WriteLine("-----------------------------------");
@@ -54,6 +73,6 @@ int count2 = 1;
 for (int i = 0; i < n; i++)
 {
     Console.WriteLine($"Студент {count2++}");
-    mass_of_students[i].Output();
+    Output(mass_of_students[i]);
 
 }
