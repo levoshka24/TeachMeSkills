@@ -1,5 +1,15 @@
 ﻿using LAb_Struct;
 using System.Transactions;
+//Вариант 3
+//Создать структуру Точка, с полями целого типа.
+//Создать структуру Треугольник, с полями точка А, точка В, точка С.
+//Создать методы ввода/вывода данных.
+//Создать метод определяющий является ли треугольник
+//равнобедренным.
+//Создать массив из треугольников. Вывести координаты
+//равнобедренных треугольников.
+//Вывести координаты треугольников, которые имеют общие точки с
+//другими.
 static void OutPut(Treugolnik treug)
 {
     Console.WriteLine($"Кордината точки А.х-{treug.a.X}\nКордината точки А.y-{treug.a.Y}\nКордината точки B.х-{treug.b.X}\nКoрдината точки B.y-{treug.b.Y}\nКордината точки C.х-{treug.c.X}\nКордината точки C.y-{treug.c.Y}\n");
@@ -23,13 +33,10 @@ static Treugolnik InputPoint()
 }
 static bool IsRavnobedr(Treugolnik treug)
 {
-   
-
-
        double  a = Math.Sqrt(Math.Pow(treug.a.X - treug.b.X, 2) - Math.Pow(treug.a.Y - treug.b.Y, 2));
        double  b = Math.Sqrt(Math.Pow(treug.b.X - treug.c.X, 2) - Math.Pow(treug.b.Y - treug.c.Y, 2));
        double c = Math.Sqrt(Math.Pow(treug.a.X - treug.c.X, 2) - Math.Pow(treug.a.Y - treug.c.Y, 2));
-      if((a == b || b==c || a == c) && (a!=0 && b!=0 && c!=0) )
+    if ((a == b || b == c || a == c) && (a != 0 && b != 0 && c != 0))
     {
         return true;
     }
@@ -37,11 +44,6 @@ static bool IsRavnobedr(Treugolnik treug)
     {
         return false;
     }
-        
- 
-
-
-
 }
 
 int opt;
@@ -124,19 +126,21 @@ do
                     counter2 += 1;
                     mass2[i] = InputPoint();
                 }
-
+                Console.WriteLine("треугольники которые имеют общие координаты");
                 for (int i = 0; i < mass2.Length; i++)
                 {
                     for (int j = 0; j < mass2.Length - 1; j++)
                     {
-                        if (mass2[j].a.X != mass2[j + 1].a.X && mass2[j].a.Y != mass2[j + 1].a.Y && mass2[j].b.X != mass2[j + 1].b.X && mass2[j].b.Y != mass2[j + 1].b.Y && mass2[j].c.X != mass2[j + 1].c.X && mass2[j].c.Y != mass2[j + 1].c.Y)
+                        if ((mass2[j].a.X == mass2[j + 1].a.X) || (mass2[j].a.Y == mass2[j + 1].a.Y) || ( mass2[j].b.X == mass2[j + 1].b.X) || (mass2[j].b.Y == mass2[j + 1].b.Y) || (mass2[j].c.X == mass2[j + 1].c.X )||( mass2[j].c.Y == mass2[j + 1].c.Y))
                         {
                             Console.WriteLine(mass2[j].a.X);
                             Console.WriteLine(mass2[j].a.Y);
                             Console.WriteLine(mass2[j].b.X);
                             Console.WriteLine(mass2[j].b.Y);
                             Console.WriteLine(mass2[j].c.X);
-                            Console.WriteLine(mass2[j].c.Y);
+                            Console.WriteLine(mass2[j].c.Y); 
+                            Console.WriteLine("\n"); 
+                    
                         }
                         
                     }

@@ -1,4 +1,4 @@
-﻿using lab_struct2;
+﻿using ConsoleApp6;
 using System;
 using System.ComponentModel;
 using System.Reflection;
@@ -38,9 +38,9 @@ do
 
             }
             break;
-         case 2:
-            
-           
+        case 2:
+
+
             Console.WriteLine("-----------------------------------");
             Console.WriteLine("Отсортированный массив студентов по возрастанию среднего балла");
             for (int i = 0; i < mass_of_students.Length; i++)
@@ -50,7 +50,7 @@ do
             }
             for (int i = 0; i < mass_of_students.Length; i++)
             {
-                for (int j = 0; j < mass_of_students.Length - 1; j++)
+                for (int j = 0; j < mass_of_students.Length - 1-i; j++)
                 {
                     if (mass_of_students[j].sredniy_bal > mass_of_students[j + 1].sredniy_bal)
                     {
@@ -62,13 +62,14 @@ do
             }
             for (int i = 0; i < mass_of_students.Length; i++)
             {
-                Output(mass_of_students[i]);
-            }
+                Console.WriteLine($"Фамилия - {mass_of_students[i].female}, Отметка по математике - {mass_of_students[i].mark_math}, Отметка по истории - {mass_of_students[i].mark_history}");
+            
+             }
             break;
         case 3:
 
             FindHasTwo(mass_of_students, out Student[] res1, out Student[] res2);
-            for(int i = 0; i < res1.Length; i++)
+            for (int i = 0; i < res1.Length; i++)
             {
                 Output(res1[i]);
             }
@@ -100,7 +101,7 @@ static double Srednball(Student stud)
     stud.sredniy_bal = (stud.mark_math + stud.mark_history) / 2;
     return stud.sredniy_bal;
 }
-static void FindHasTwo(Student[] mass_of_students,out Student[] res1,out Student[] res2)
+static void FindHasTwo(Student[] mass_of_students, out Student[] res1, out Student[] res2)
 {
     res1 = Array.FindAll(mass_of_students, stud => stud.mark_history == 2);
     res2 = Array.FindAll(mass_of_students, stud => stud.mark_math == 2);

@@ -64,8 +64,17 @@ static void Swap(ref int a, ref int b)
     a = b;
     b = t;
 }
+void Print(int[] mass)
+{
+    for(int i = 0; i < n; i++)
+    {
+        Console.Write(mass[i] + " ");
+        
+    }
+    
+}
 //стоящие оддин от другого на некотором растоянии д.после этого процедура повт для меньш значений а завершается упораяд эл при д =1
-static int[] ShellSort(int[] array)
+ int[] ShellSort(int[] array)
 {
     //расстояние между элементами, которые сравниваются
     var d = array.Length / 2;
@@ -78,6 +87,7 @@ static int[] ShellSort(int[] array)
             {
                 Swap(ref array[j], ref array[j - d]);
                 j = j - d;
+                Print(array);
             }
         }
 
@@ -94,15 +104,11 @@ count2 += 3;
 for (int i = 0; i < array.Length; i++)
 {
     count2 += 3;
-    array[i] = rnd.Next(15);
+    array[i] = rnd.Next(0,100);
     count2 += 3;
 }
-count2 += 2;
-for (int i = 0; i < n2; i++)
-{
-    count2 += 2;
-    Console.Write(array[i] + " ");
-}
+
+
 Console.WriteLine("\nОтсортированный массив: {0}", string.Join(", ", ShellSort(array)));
 time2.Stop();
 Console.WriteLine($"Потраченное время - {time2.Elapsed}");
