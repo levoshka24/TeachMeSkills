@@ -1,0 +1,13 @@
+.text1{
+    color:red;
+    font-size: 10px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+.text2{
+    color:blue;
+    font-size:10px;
+    font-family:'Courier New', Courier, monospace;
+}
+.container2{
+    margin:30px,20px,30px,40px;
+}

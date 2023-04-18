@@ -1,0 +1,28 @@
+﻿@{
+    ViewData["Title"] = "Privacy Policy";
+}
+<h1>@ViewData["Title"]</h1>
+
+<p>Use this page to detail your site's privacy policy.</p>
+@using WebApplication3.Models.TMS_HW;
+@model List<Book>
+<h1>Books</h1>
+<table class="table">
+    <tr>
+        <td>Id</td>
+        <td>Name</td>
+        <td>CountOfPages</td>
+        <td>Author</td>
+    </tr>
+    @foreach (var p in Model)
+    {
+        <tr>
+            <td>@p.Id</td>
+            <td>@p.Name</td>
+            <td>@p.CountOfPages</td>
+            <td>@p.Author</td>
+        </tr>
+    }
+
+</table>
+<a asp-action="Create">Добавить</a>

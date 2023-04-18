@@ -7,8 +7,10 @@ using System.Data.SqlClient;
 
 namespace Course3
 {
+    // класс для общения с базай данный
     public class DataBase
     {
+        // создаем экземпляр класса базы данных
         SqlConnection sqlconnection = new SqlConnection(@"Data Source=LEON-PC\SQLEXPRESS; Initial Catalog=coursach;Integrated Security=True");
         public void openConnection()
         {

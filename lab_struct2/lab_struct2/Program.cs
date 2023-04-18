@@ -1,6 +1,8 @@
 ﻿using lab_struct2;
 using System;
 using System.ComponentModel;
+using System.Diagnostics;
+using System.IO;
 using System.Reflection;
 //Вариант 3
 //Имеется информация по итогам экзаменов в университете в виде
@@ -9,45 +11,28 @@ using System.Reflection;
 //истории. Вывести информацию о студентах, имеющих хотя бы одну двойку,
 //с указанием предмета, по которому она получена.
 //Отсортировать массив по возрастанию среднего балла.
-Console.WriteLine("введите количество студентов");
-int n = Convert.ToInt32(Console.ReadLine());
-Student[] mass_of_students = new Student[n];
+
+string inputfile = "enter.txt";
+Student[] mass_of_students = Input(inputfile);
+Output2(mass_of_students);
 int opt;
+string path = "result.txt";
 do
 {
-    Console.WriteLine("1.Заполнить студентов");
+   
     Console.WriteLine("2.Отсортированный массив студентов по возрастанию среднего балла");
     Console.WriteLine("3.Вывести студентов которые имеют 2 по предметам");
     Console.WriteLine("4.Exit");
     opt = Convert.ToInt32(Console.ReadLine());
     switch (opt)
     {
-        case 1:
-            int count = 1;
-            int count1 = 1;
-            for (int i = 0; i < mass_of_students.Length; i++)
-            {
-                Console.WriteLine($"Студент {count++}");
-                mass_of_students[i] = Input();
-            }
-            Console.Clear();
-            for (int i = 0; i < mass_of_students.Length; i++)
-            {
-                Console.WriteLine($"Студент {count1++}");
-                Output(mass_of_students[i]);
-
-            }
-            break;
+       
          case 2:
             
            
             Console.WriteLine("-----------------------------------");
             Console.WriteLine("Отсортированный массив студентов по возрастанию среднего балла");
-            for (int i = 0; i < mass_of_students.Length; i++)
-            {
-                Srednball(mass_of_students[i]);
-
-            }
+            
             for (int i = 0; i < mass_of_students.Length; i++)
             {
                 for (int j = 0; j < mass_of_students.Length - 1; j++)
@@ -66,10 +51,14 @@ do
             }
             break;
         case 3:
-
+            
             FindHasTwo(mass_of_students, out Student[] res1, out Student[] res2);
             for(int i = 0; i < res1.Length; i++)
             {
+                using (StreamWriter writer = new StreamWriter(path, true))
+                {
+                    writer.Write("sosi");
+                }
                 Output(res1[i]);
             }
             for (int i = 0; i < res2.Length; i++)
@@ -80,26 +69,37 @@ do
     }
 }
 while (opt != 4);
-static void Output(Student stud)
+static void Output(Student studs)
 {
-    Console.WriteLine($"Фамилия - {stud.female}, Отметка по математике - {stud.mark_math}, Отметка по истории - {stud.mark_history}");
+    Console.WriteLine($"Фамилия - {studs.female}, Отметка по математике - {studs.mark_math}, Отметка по истории - {studs.mark_history} , Средний балл студента - {studs.sredniy_bal}");
 }
-static Student Input()
+static void Output2(Student[] stud)
 {
-    Student student = new Student();
-    Console.WriteLine("введите фамилию студента");
-    student.female = Console.ReadLine();
-    Console.WriteLine("Введите отметку по истории");
-    student.mark_history = int.Parse(Console.ReadLine());
-    Console.WriteLine("Введите отметку по математике");
-    student.mark_math = int.Parse(Console.ReadLine());
-    return student;
+    foreach (Student studs in stud)
+    {
+        Console.WriteLine($"Фамилия - {studs.female}, Отметка по математике - {studs.mark_math}, Отметка по истории - {studs.mark_history} , Средний балл студента - {studs.sredniy_bal}");
+    }
 }
-static double Srednball(Student stud)
+static Student[] Input(string fileName)
 {
-    stud.sredniy_bal = (stud.mark_math + stud.mark_history) / 2;
-    return stud.sredniy_bal;
+    string[] s = File.ReadAllLines(fileName);
+
+    Student[] mass_of_students2 = new Student[s.Length];
+    int k = 0;
+    foreach (string s2 in s)
+    {
+        string[] studs = s2.Split(new[] { ';' });
+
+        mass_of_students2[k].mark_math = Convert.ToInt32(studs[0]);
+        mass_of_students2[k].mark_history = Convert.ToInt32(studs[1]);
+        mass_of_students2[k].sredniy_bal = Convert.ToInt32(studs[2]);
+        mass_of_students2[k].female = studs[3];
+
+        k++;
+    }
+    return mass_of_students2;
 }
+
 static void FindHasTwo(Student[] mass_of_students,out Student[] res1,out Student[] res2)
 {
     res1 = Array.FindAll(mass_of_students, stud => stud.mark_history == 2);

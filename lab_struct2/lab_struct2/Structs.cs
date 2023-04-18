@@ -10,11 +10,12 @@ namespace lab_struct2
    public struct Student
     {
         
-        public double mark_math;
-        public double mark_history;
-        public string female;
-        public double sredniy_bal;
+        public int mark_math;
+        public int mark_history;
         
+        public int sredniy_bal;
+        public string female;
+
 
     }
 }

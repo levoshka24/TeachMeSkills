@@ -80,7 +80,125 @@ namespace Course3
 
         private void button_save_Click(object sender, EventArgs e)
         {
+            Update();
+        }
 
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            // занесение данных в гридвью в бд когда вводит их пользователь
+            selectedRow=e.RowIndex;
+            if(e.RowIndex >= 0)
+            {
+                DataGridViewRow row = dataGridView1.Rows[selectedRow];
+                textBox_id.Text = row.Cells[0].Value.ToString();
+                textBox_type_of_product.Text = row.Cells[1].Value.ToString();
+                textBox_kolvo.Text = row.Cells[2].Value.ToString();
+                textBox_postavka.Text = row.Cells[3].Value.ToString();
+                textBox_price.Text = row.Cells[4].Value.ToString();
+               
+
+            }
+        }
+        //реализация поиска
+        private void Search(DataGridView dgw)
+        {
+            dgw.Rows.Clear();
+            // стандартная выборка данных
+            string searchString = $"select * from main_db where concat(id,type_of,count_of,postavka,price) like '%" + textBox_search.Text + "%'";
+            // общаемся с бд
+            SqlCommand com = new SqlCommand(searchString, database.getConnection());
+            database.openConnection();
+            SqlDataReader read = com.ExecuteReader();
+            while (read.Read())
+            {
+                ReadSingleRow(dgw, read);
+            }
+            read.Close();
+        }
+        private void deleteRow()
+        {
+            //передаем индекс колонки для удаления
+            int index = dataGridView1.CurrentCell.RowIndex;
+            dataGridView1.Rows[index].Visible = false;
+            if (dataGridView1.Rows[index].Cells[0].Value.ToString() == string.Empty)
+            {
+                dataGridView1.Rows[index].Cells[5].Value = RowState.Deleted;
+            }
+            dataGridView1.Rows[index].Cells[5].Value = RowState.Deleted;
+
+        }
+        private void Update()
+        {
+            database.openConnection();
+            for(int index=0;index<dataGridView1.Rows.Count; index++)
+            {
+                var rowState = (RowState)dataGridView1.Rows[index].Cells[5].Value;
+                if(rowState == RowState.Existed)
+                {
+                    continue;
+                }
+                if (rowState == RowState.Deleted)
+                {
+                    var id = Convert.ToInt32(dataGridView1.Rows[index].Cells[0].Value);
+                    var deleteQuery = $"delete from main_db where id = {id}";
+                    var command = new SqlCommand(deleteQuery,database.getConnection());
+                    command.ExecuteNonQuery();
+                }
+                if (rowState == RowState.Modified)
+                {
+                    var id = dataGridView1.Rows[index].Cells[0].Value.ToString();
+                    var type = dataGridView1.Rows[index].Cells[1].Value.ToString();
+                    var count = dataGridView1.Rows[index].Cells[2].Value.ToString();
+                    var postavka = dataGridView1.Rows[index].Cells[3].Value.ToString();
+                    var price = dataGridView1.Rows[index].Cells[4].Value.ToString();
+                    var changeQuery = $"update main_db set type_of = '{type}', count_of = '{count}',postavka = '{postavka}',price = '{price}' where id = '{id}'";
+                    var command = new SqlCommand(changeQuery,database.getConnection());
+                    command.ExecuteNonQuery();
+                }
+               
+            }
+            database.closeConnection();
+        }
+        private void button_refresh_Click(object sender, EventArgs e)
+        {
+           RefreshDataGrid(dataGridView1);
+        }
+
+        private void button_new_sign_Click(object sender, EventArgs e)
+        {
+            new_sign form = new new_sign();
+            form.Show();
+        }
+
+        private void textBox_search_TextChanged(object sender, EventArgs e)
+        {
+            //поиск данных
+            Search(dataGridView1);
+        }
+
+        private void button_del_Click(object sender, EventArgs e)
+        {
+            deleteRow();
+        }
+        //создаем метод изменить записис будем изменять значения с тексбоксов и зансоить их в ячейки
+        private void Change()
+        {
+            var selectedRowIndex = dataGridView1.CurrentCell.RowIndex;
+            var id = textBox_id.Text;
+            var type = textBox_type_of_product.Text;
+            var count = textBox_kolvo.Text;
+            var postavka = textBox_postavka.Text;
+            var price = textBox_price.Text;
+            if (dataGridView1.Rows[selectedRowIndex].Cells[0].Value.ToString() != string.Empty)
+            {
+                //само изенения значений пржде мы считали значения и уже добавляем в таблицу
+                dataGridView1.Rows[selectedRowIndex].SetValues(id,type,count,postavka,price);
+                dataGridView1.Rows[selectedRowIndex].Cells[5].Value = RowState.Modified;
+            }
+        }
+        private void button_change_Click(object sender, EventArgs e)
+        {
+            Change();
         }
     }
 }
