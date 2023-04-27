@@ -1,0 +1,27 @@
+﻿
+@{
+    ViewData["Title"] = "Privacy Policy";
+}
+@using WebApplication4.Models.EBDb2
+
+<h2>List Of lovers asparagus</h2>
+
+<div class="table">
+    <table>
+        <tr>
+            <th>Name</th>
+            <th>Email</th>
+            <th>DateTime</th>
+            <th>Are you love asparagus?</th>
+        </tr>
+        @foreach (var user in ViewBag.Users)
+        {
+            <tr>
+                <td>@user.Name</td>
+                <td>@user.Email</td>
+                <td>@user.DateTime</td>
+                <td>@user.Name ел спаржу уже @user.Count раз</td>
+            </tr>
+        }
+    </table>
+</div>

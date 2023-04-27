@@ -1,0 +1,17 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+<h1>@ViewData["Title"]</h1>
+@using WebApplication4.Models.EBDb2
+<div>
+    @using (Html.BeginForm("Index", "Home", FormMethod.Post))
+    {
+        @Html.Label("Your name:") <br />
+        @Html.TextBox("Name") <br />
+        @Html.Label("Your email:") <br />
+        @Html.TextBox("Email") <br />
+        <input type="submit" value="Я съел спаржу!" />
+    }
+    <br />
+    @Html.ActionLink("List Of lovers asparagus", "ListOfUsers")
+</div>

@@ -1,6 +1,9 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc.Rendering;
 using System.Diagnostics;
+using System.Net.Cache;
 using WebApplication3.Models;
+
 using WebApplication3.Models.TMS_HW;
 
 namespace WebApplication3.Controllers
@@ -15,18 +18,43 @@ namespace WebApplication3.Controllers
             this.db = context;
         }
 
-       public IActionResult Create()
-        {
-            return View();
-        }
+       
 
-        [HttpPost]
-        public IActionResult Create(Book book)
+        // добавление в бд
+        public IActionResult Create()
         {
-            db.Books.Add(book);
-            db.SaveChanges();
-            return RedirectToAction("Index");
+            var authors = db.Authors.ToList();
+            IEnumerable<SelectListItem> authorItems =authors.Select(m => new SelectListItem
+            {
+                Value = m.Id.ToString(),
+                Text = m.Name
+            });
+            ViewBag.Author = authorItems;
+            
+
+            return View();
+
         }
+        // сохранение в бд новых данных
+        //[HttpPost]
+        //public  IActionResult Create(UserViewModel model)
+        //{
+        //    var authors = db.Authors.FirstOrDefault(m => m.Id == model.AuthorId);
+        //    var book = new Book
+        //    {
+        //        Name = model.Name,
+        //        CountOfPages = model.Count
+        //        AuthorId = authors,
+
+        //    };
+
+        //    db.Books.Add(book);
+        //    db.SaveChanges();
+        //    return RedirectToAction("Index");
+
+        //}
+
+    
         public IActionResult Index()
         {
             return View();

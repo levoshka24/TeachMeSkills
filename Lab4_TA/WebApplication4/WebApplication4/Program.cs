@@ -1,17 +1,16 @@
-using HW_BOOK.Models;
-
 using Microsoft.EntityFrameworkCore;
+using WebApplication4.Models;
 
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
-
-
-//считваем с json адресс конетка и при помощи билдера конектимся к бд
 string connection = builder.Configuration.GetConnectionString("DefaultConnection");
- builder.Services.AddDbContext<ApplicationContext>(options => options.UseSqlServer(connection));
+builder.Services.AddDbContext<ApplicationContext>(options => options.UseSqlServer(connection));
+
+
 var app = builder.Build();
+
 // Configure the HTTP request pipeline.
 if (!app.Environment.IsDevelopment())
 {
@@ -29,6 +28,6 @@ app.UseAuthorization();
 
 app.MapControllerRoute(
     name: "default",
-    pattern: "{controller=Home}/{action=Index}/{id?}");
+    pattern: "{controller=Home}/{action=Privacy}/{id?}");
 
 app.Run();
