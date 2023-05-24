@@ -116,6 +116,7 @@
             this.textBox_login.Name = "textBox_login";
             this.textBox_login.Size = new System.Drawing.Size(205, 22);
             this.textBox_login.TabIndex = 16;
+            this.textBox_login.TextChanged += new System.EventHandler(this.textBox_login_TextChanged);
             // 
             // textBox_password
             // 
@@ -158,7 +159,7 @@
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.pictureBox1);
             this.Name = "log_in";
-            this.Text = "log_in";
+            this.Text = "LeoText";
             this.Load += new System.EventHandler(this.log_in_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel1.ResumeLayout(false);

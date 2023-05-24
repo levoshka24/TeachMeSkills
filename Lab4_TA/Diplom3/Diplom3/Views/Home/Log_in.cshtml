@@ -1,0 +1,27 @@
+﻿@model UserLogIn;
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+
+    <meta charset="UTF-8">
+    <title>Tutors</title>
+    <link rel="stylesheet" href="~/css/Log_in.css" type="text/css">
+</head>
+<body>
+    <style>
+        body {
+            background-color: black;
+        }
+    </style>
+    <h1 class="log_in">Вход</h1>
+    <form asp-action="Log_in" asp-controller="Course">
+        <div class="container-enter">
+            <input type="text" asp-for="Email" class="input-email" name="email" />
+            <input type="password" asp-for="Password" class="input-password" name="password" />
+            <input type="submit" value="Отправить" class="phone-btn" />
+            
+        </div>
+    </form>
+
+</body>
+</html>

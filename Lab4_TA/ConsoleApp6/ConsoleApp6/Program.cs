@@ -78,6 +78,9 @@ do
                 Output(res2[i]);
             }
             break;
+        case 4:
+
+            break;
     }
 }
 while (opt != 4);

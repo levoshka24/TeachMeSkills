@@ -1,0 +1,43 @@
+﻿@using Diplom3.Models;
+@model PhoneConsult;
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+   
+    <meta charset="UTF-8">
+    <title>Tutors</title>
+    <link rel="stylesheet" href="~/css/style_course_main.css" type="text/css">
+</head>
+<body>
+   
+    <style>
+        body {
+            background-color: black;
+        }
+    </style>
+    
+    <h1 class="title3">Наши выпускники работают в:</h1>
+    <a class="online" asp-area="" asp-controller="Course" asp-action="Course_online">Онлайн Курсы</a>
+    <a class="offline2" asp-area="" asp-controller="Course" asp-action="Course_offline">Оффлайн Курсы</a>
+    <h1 class="title1">Каталог курсов</h1>
+    <h2 class="title2">За 6 лет мы выпустили более 8000 айтишников, которые успешно начали свой путь в международных IT компаниях.</h2>
+    <img class="online2" src="~/img/15.jpg" />
+    <img class="offline" src="~/img/16.jpg" />
+    <img class="company" src="~/img/companies.png" />
+    <form asp-action="Course_main" asp-controller="Home">
+        <div class="container-input">
+            
+            <img class="input-img" src="~/img/fon3.jpg" /> 
+            <h1 class="inputnik-text">Нужна помощь с выбором курса?</h1>
+            
+                <input type="text" asp-for="PhoneNumber" class="input-phone" />
+                <input type="submit"  value="Отправить" class="phone-btn" />
+            <h2 class="inp">Оставь телефон в форме ниже, и мы проконсультируем тебя в ближайшее время.</h2>
+        </div>
+    </form>
+    
+
+    
+
+</body>
+</html>

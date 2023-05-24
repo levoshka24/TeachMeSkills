@@ -61,10 +61,7 @@ namespace Course3
             }
         }
 
-        private void textBox1_TextChanged(object sender, EventArgs e)
-        {
-
-        }
+       
 
         private void linkLabel_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
@@ -79,6 +76,11 @@ namespace Course3
             // обработка кнопки очистки
             textBox_login.Text = "";
             textBox_password.Text = "";
+        }
+
+        private void textBox_login_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

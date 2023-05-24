@@ -145,7 +145,7 @@
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.pictureBox2);
             this.Name = "sign_up";
-            this.Text = "sign_up";
+            this.Text = "LeoText";
             this.Load += new System.EventHandler(this.sign_up_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.panel1.ResumeLayout(false);

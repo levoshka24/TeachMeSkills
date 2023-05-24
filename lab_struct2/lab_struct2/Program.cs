@@ -11,12 +11,15 @@ using System.Reflection;
 //истории. Вывести информацию о студентах, имеющих хотя бы одну двойку,
 //с указанием предмета, по которому она получена.
 //Отсортировать массив по возрастанию среднего балла.
+Console.WriteLine("Введите число пользователей");
+int n = Convert.ToInt32(Console.ReadLine());
 
-string inputfile = "enter.txt";
-Student[] mass_of_students = Input(inputfile);
-Output2(mass_of_students);
-int opt;
-string path = "result.txt";
+Student[] mass_of_students = new Student[n];
+for (int i = 0; i < n; i++)
+{
+    Input(mass_of_students[i]);
+}
+    int opt;
 do
 {
    
@@ -55,10 +58,10 @@ do
             FindHasTwo(mass_of_students, out Student[] res1, out Student[] res2);
             for(int i = 0; i < res1.Length; i++)
             {
-                using (StreamWriter writer = new StreamWriter(path, true))
-                {
-                    writer.Write("sosi");
-                }
+                
+                
+                    
+                
                 Output(res1[i]);
             }
             for (int i = 0; i < res2.Length; i++)
@@ -80,24 +83,17 @@ static void Output2(Student[] stud)
         Console.WriteLine($"Фамилия - {studs.female}, Отметка по математике - {studs.mark_math}, Отметка по истории - {studs.mark_history} , Средний балл студента - {studs.sredniy_bal}");
     }
 }
-static Student[] Input(string fileName)
+static Student Input(Student st)
 {
-    string[] s = File.ReadAllLines(fileName);
-
-    Student[] mass_of_students2 = new Student[s.Length];
-    int k = 0;
-    foreach (string s2 in s)
-    {
-        string[] studs = s2.Split(new[] { ';' });
-
-        mass_of_students2[k].mark_math = Convert.ToInt32(studs[0]);
-        mass_of_students2[k].mark_history = Convert.ToInt32(studs[1]);
-        mass_of_students2[k].sredniy_bal = Convert.ToInt32(studs[2]);
-        mass_of_students2[k].female = studs[3];
-
-        k++;
-    }
-    return mass_of_students2;
+    Console.WriteLine("Введите отметку по математике");
+    st.mark_math=int.Parse(Console.ReadLine());
+    Console.WriteLine("Введите отметку по истории");
+    st.mark_history = int.Parse(Console.ReadLine());
+    Console.WriteLine("Введите ваш средний бал");
+    st.sredniy_bal = int.Parse(Console.ReadLine());
+    Console.WriteLine("Введите вашу фамилию");
+    st.female = Console.ReadLine();
+    return st;
 }
 
 static void FindHasTwo(Student[] mass_of_students,out Student[] res1,out Student[] res2)

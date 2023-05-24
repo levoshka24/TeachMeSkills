@@ -29,28 +29,12 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
-            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
-            this.файлToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.создатьToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.открытьToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripSeparator = new System.Windows.Forms.ToolStripSeparator();
-            this.сохранитьToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.сохранитькакToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
-            this.печатьToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.предварительныйпросмотрToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
-            this.выходToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.правкаToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.отменадействияToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.отменадействияToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripSeparator3 = new System.Windows.Forms.ToolStripSeparator();
-            this.вырезатьToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.копироватьToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.вставкаToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripSeparator4 = new System.Windows.Forms.ToolStripSeparator();
-            this.выделитьвсеToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.panel4 = new System.Windows.Forms.Panel();
+            this.button1 = new System.Windows.Forms.Button();
+            this.button_make_new_postavka_product = new System.Windows.Forms.Button();
+            this.import = new System.Windows.Forms.Button();
+            this.label3 = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.button_del = new System.Windows.Forms.Button();
@@ -58,12 +42,12 @@
             this.button_change = new System.Windows.Forms.Button();
             this.button_new_sign = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.comboBox2 = new System.Windows.Forms.ComboBox();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.textBox12 = new System.Windows.Forms.TextBox();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.textBox_price = new System.Windows.Forms.TextBox();
-            this.textBox_postavka = new System.Windows.Forms.TextBox();
             this.textBox_kolvo = new System.Windows.Forms.TextBox();
-            this.textBox_type_of_product = new System.Windows.Forms.TextBox();
             this.textBox_id = new System.Windows.Forms.TextBox();
             this.textBox6 = new System.Windows.Forms.TextBox();
             this.textBox5 = new System.Windows.Forms.TextBox();
@@ -72,15 +56,16 @@
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.label2 = new System.Windows.Forms.Label();
+            this.Обновить = new System.Windows.Forms.Label();
             this.textBox_search = new System.Windows.Forms.TextBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.button_refresh = new System.Windows.Forms.Button();
             this.textBox1 = new System.Windows.Forms.TextBox();
-            this.buttonClear = new System.Windows.Forms.Button();
             this.Tabs = new System.Windows.Forms.TabControl();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.menuStrip1.SuspendLayout();
             this.tabPage2.SuspendLayout();
+            this.panel4.SuspendLayout();
             this.panel3.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
@@ -91,184 +76,11 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
-            // menuStrip1
-            // 
-            this.menuStrip1.BackColor = System.Drawing.Color.Sienna;
-            this.menuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
-            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.файлToolStripMenuItem,
-            this.правкаToolStripMenuItem});
-            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
-            this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Padding = new System.Windows.Forms.Padding(5, 2, 0, 2);
-            this.menuStrip1.Size = new System.Drawing.Size(967, 30);
-            this.menuStrip1.TabIndex = 0;
-            this.menuStrip1.Text = "menuStrip1";
-            // 
-            // файлToolStripMenuItem
-            // 
-            this.файлToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.создатьToolStripMenuItem,
-            this.открытьToolStripMenuItem,
-            this.toolStripSeparator,
-            this.сохранитьToolStripMenuItem,
-            this.сохранитькакToolStripMenuItem,
-            this.toolStripSeparator1,
-            this.печатьToolStripMenuItem,
-            this.предварительныйпросмотрToolStripMenuItem,
-            this.toolStripSeparator2,
-            this.выходToolStripMenuItem});
-            this.файлToolStripMenuItem.Name = "файлToolStripMenuItem";
-            this.файлToolStripMenuItem.Size = new System.Drawing.Size(59, 24);
-            this.файлToolStripMenuItem.Text = "&Файл";
-            // 
-            // создатьToolStripMenuItem
-            // 
-            this.создатьToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("создатьToolStripMenuItem.Image")));
-            this.создатьToolStripMenuItem.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.создатьToolStripMenuItem.Name = "создатьToolStripMenuItem";
-            this.создатьToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.N)));
-            this.создатьToolStripMenuItem.Size = new System.Drawing.Size(294, 26);
-            this.создатьToolStripMenuItem.Text = "&Создать";
-            // 
-            // открытьToolStripMenuItem
-            // 
-            this.открытьToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("открытьToolStripMenuItem.Image")));
-            this.открытьToolStripMenuItem.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.открытьToolStripMenuItem.Name = "открытьToolStripMenuItem";
-            this.открытьToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.O)));
-            this.открытьToolStripMenuItem.Size = new System.Drawing.Size(294, 26);
-            this.открытьToolStripMenuItem.Text = "&Открыть";
-            // 
-            // toolStripSeparator
-            // 
-            this.toolStripSeparator.Name = "toolStripSeparator";
-            this.toolStripSeparator.Size = new System.Drawing.Size(291, 6);
-            // 
-            // сохранитьToolStripMenuItem
-            // 
-            this.сохранитьToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("сохранитьToolStripMenuItem.Image")));
-            this.сохранитьToolStripMenuItem.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.сохранитьToolStripMenuItem.Name = "сохранитьToolStripMenuItem";
-            this.сохранитьToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.S)));
-            this.сохранитьToolStripMenuItem.Size = new System.Drawing.Size(294, 26);
-            this.сохранитьToolStripMenuItem.Text = "&Сохранить";
-            // 
-            // сохранитькакToolStripMenuItem
-            // 
-            this.сохранитькакToolStripMenuItem.Name = "сохранитькакToolStripMenuItem";
-            this.сохранитькакToolStripMenuItem.Size = new System.Drawing.Size(294, 26);
-            this.сохранитькакToolStripMenuItem.Text = "Сохранить &как";
-            // 
-            // toolStripSeparator1
-            // 
-            this.toolStripSeparator1.Name = "toolStripSeparator1";
-            this.toolStripSeparator1.Size = new System.Drawing.Size(291, 6);
-            // 
-            // печатьToolStripMenuItem
-            // 
-            this.печатьToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("печатьToolStripMenuItem.Image")));
-            this.печатьToolStripMenuItem.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.печатьToolStripMenuItem.Name = "печатьToolStripMenuItem";
-            this.печатьToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.P)));
-            this.печатьToolStripMenuItem.Size = new System.Drawing.Size(294, 26);
-            this.печатьToolStripMenuItem.Text = "&Печать";
-            // 
-            // предварительныйпросмотрToolStripMenuItem
-            // 
-            this.предварительныйпросмотрToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("предварительныйпросмотрToolStripMenuItem.Image")));
-            this.предварительныйпросмотрToolStripMenuItem.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.предварительныйпросмотрToolStripMenuItem.Name = "предварительныйпросмотрToolStripMenuItem";
-            this.предварительныйпросмотрToolStripMenuItem.Size = new System.Drawing.Size(294, 26);
-            this.предварительныйпросмотрToolStripMenuItem.Text = "Предварительный про&смотр";
-            // 
-            // toolStripSeparator2
-            // 
-            this.toolStripSeparator2.Name = "toolStripSeparator2";
-            this.toolStripSeparator2.Size = new System.Drawing.Size(291, 6);
-            // 
-            // выходToolStripMenuItem
-            // 
-            this.выходToolStripMenuItem.Name = "выходToolStripMenuItem";
-            this.выходToolStripMenuItem.Size = new System.Drawing.Size(294, 26);
-            this.выходToolStripMenuItem.Text = "Вы&ход";
-            // 
-            // правкаToolStripMenuItem
-            // 
-            this.правкаToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.отменадействияToolStripMenuItem,
-            this.отменадействияToolStripMenuItem1,
-            this.toolStripSeparator3,
-            this.вырезатьToolStripMenuItem,
-            this.копироватьToolStripMenuItem,
-            this.вставкаToolStripMenuItem,
-            this.toolStripSeparator4,
-            this.выделитьвсеToolStripMenuItem});
-            this.правкаToolStripMenuItem.Name = "правкаToolStripMenuItem";
-            this.правкаToolStripMenuItem.Size = new System.Drawing.Size(74, 24);
-            this.правкаToolStripMenuItem.Text = "&Правка";
-            // 
-            // отменадействияToolStripMenuItem
-            // 
-            this.отменадействияToolStripMenuItem.Name = "отменадействияToolStripMenuItem";
-            this.отменадействияToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.Z)));
-            this.отменадействияToolStripMenuItem.Size = new System.Drawing.Size(263, 26);
-            this.отменадействияToolStripMenuItem.Text = "&Отмена действия";
-            // 
-            // отменадействияToolStripMenuItem1
-            // 
-            this.отменадействияToolStripMenuItem1.Name = "отменадействияToolStripMenuItem1";
-            this.отменадействияToolStripMenuItem1.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.Y)));
-            this.отменадействияToolStripMenuItem1.Size = new System.Drawing.Size(263, 26);
-            this.отменадействияToolStripMenuItem1.Text = "&Отмена действия";
-            // 
-            // toolStripSeparator3
-            // 
-            this.toolStripSeparator3.Name = "toolStripSeparator3";
-            this.toolStripSeparator3.Size = new System.Drawing.Size(260, 6);
-            // 
-            // вырезатьToolStripMenuItem
-            // 
-            this.вырезатьToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("вырезатьToolStripMenuItem.Image")));
-            this.вырезатьToolStripMenuItem.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.вырезатьToolStripMenuItem.Name = "вырезатьToolStripMenuItem";
-            this.вырезатьToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.X)));
-            this.вырезатьToolStripMenuItem.Size = new System.Drawing.Size(263, 26);
-            this.вырезатьToolStripMenuItem.Text = "Вырезат&ь";
-            // 
-            // копироватьToolStripMenuItem
-            // 
-            this.копироватьToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("копироватьToolStripMenuItem.Image")));
-            this.копироватьToolStripMenuItem.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.копироватьToolStripMenuItem.Name = "копироватьToolStripMenuItem";
-            this.копироватьToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.C)));
-            this.копироватьToolStripMenuItem.Size = new System.Drawing.Size(263, 26);
-            this.копироватьToolStripMenuItem.Text = "&Копировать";
-            // 
-            // вставкаToolStripMenuItem
-            // 
-            this.вставкаToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("вставкаToolStripMenuItem.Image")));
-            this.вставкаToolStripMenuItem.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.вставкаToolStripMenuItem.Name = "вставкаToolStripMenuItem";
-            this.вставкаToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.V)));
-            this.вставкаToolStripMenuItem.Size = new System.Drawing.Size(263, 26);
-            this.вставкаToolStripMenuItem.Text = "Вст&авка";
-            // 
-            // toolStripSeparator4
-            // 
-            this.toolStripSeparator4.Name = "toolStripSeparator4";
-            this.toolStripSeparator4.Size = new System.Drawing.Size(260, 6);
-            // 
-            // выделитьвсеToolStripMenuItem
-            // 
-            this.выделитьвсеToolStripMenuItem.Name = "выделитьвсеToolStripMenuItem";
-            this.выделитьвсеToolStripMenuItem.Size = new System.Drawing.Size(263, 26);
-            this.выделитьвсеToolStripMenuItem.Text = "Выделить &все";
-            // 
             // tabPage2
             // 
             this.tabPage2.BackColor = System.Drawing.Color.SaddleBrown;
             this.tabPage2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("tabPage2.BackgroundImage")));
+            this.tabPage2.Controls.Add(this.panel4);
             this.tabPage2.Controls.Add(this.panel3);
             this.tabPage2.Controls.Add(this.panel2);
             this.tabPage2.Controls.Add(this.dataGridView1);
@@ -280,6 +92,65 @@
             this.tabPage2.Size = new System.Drawing.Size(959, 813);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Отдел №1";
+            // 
+            // panel4
+            // 
+            this.panel4.Controls.Add(this.button1);
+            this.panel4.Controls.Add(this.button_make_new_postavka_product);
+            this.panel4.Controls.Add(this.import);
+            this.panel4.Controls.Add(this.label3);
+            this.panel4.Location = new System.Drawing.Point(747, 358);
+            this.panel4.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(204, 265);
+            this.panel4.TabIndex = 13;
+            // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.DarkSalmon;
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.button1.Location = new System.Drawing.Point(3, 200);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(192, 43);
+            this.button1.TabIndex = 15;
+            this.button1.Text = "Добавить тип товара";
+            this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click_1);
+            // 
+            // button_make_new_postavka_product
+            // 
+            this.button_make_new_postavka_product.BackColor = System.Drawing.Color.DarkSalmon;
+            this.button_make_new_postavka_product.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.button_make_new_postavka_product.Location = new System.Drawing.Point(3, 148);
+            this.button_make_new_postavka_product.Name = "button_make_new_postavka_product";
+            this.button_make_new_postavka_product.Size = new System.Drawing.Size(192, 43);
+            this.button_make_new_postavka_product.TabIndex = 14;
+            this.button_make_new_postavka_product.Text = "Добавить поставщика ";
+            this.button_make_new_postavka_product.UseVisualStyleBackColor = false;
+            this.button_make_new_postavka_product.Click += new System.EventHandler(this.button_make_new_postavka_product_Click);
+            // 
+            // import
+            // 
+            this.import.BackColor = System.Drawing.Color.DarkSalmon;
+            this.import.Location = new System.Drawing.Point(3, 100);
+            this.import.Name = "import";
+            this.import.Size = new System.Drawing.Size(192, 38);
+            this.import.TabIndex = 13;
+            this.import.Text = "Импорт в Excel";
+            this.import.UseVisualStyleBackColor = false;
+            this.import.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // label3
+            // 
+            this.label3.BackColor = System.Drawing.Color.Peru;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label3.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.label3.Location = new System.Drawing.Point(41, 31);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(127, 26);
+            this.label3.TabIndex = 5;
+            this.label3.Text = "Помощник";
+            this.label3.Click += new System.EventHandler(this.label3_Click);
             // 
             // panel3
             // 
@@ -324,7 +195,7 @@
             this.button_save.Name = "button_save";
             this.button_save.Size = new System.Drawing.Size(144, 37);
             this.button_save.TabIndex = 2;
-            this.button_save.Text = "Сохранить";
+            this.button_save.Text = "Сохранить в базе данных";
             this.button_save.UseVisualStyleBackColor = false;
             this.button_save.Click += new System.EventHandler(this.button_save_Click);
             // 
@@ -354,12 +225,12 @@
             // 
             // panel2
             // 
+            this.panel2.Controls.Add(this.comboBox2);
+            this.panel2.Controls.Add(this.comboBox1);
             this.panel2.Controls.Add(this.textBox12);
             this.panel2.Controls.Add(this.pictureBox3);
             this.panel2.Controls.Add(this.textBox_price);
-            this.panel2.Controls.Add(this.textBox_postavka);
             this.panel2.Controls.Add(this.textBox_kolvo);
-            this.panel2.Controls.Add(this.textBox_type_of_product);
             this.panel2.Controls.Add(this.textBox_id);
             this.panel2.Controls.Add(this.textBox6);
             this.panel2.Controls.Add(this.textBox5);
@@ -371,6 +242,25 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(421, 265);
             this.panel2.TabIndex = 12;
+            // 
+            // comboBox2
+            // 
+            this.comboBox2.BackColor = System.Drawing.SystemColors.InactiveCaption;
+            this.comboBox2.FormattingEnabled = true;
+            this.comboBox2.Location = new System.Drawing.Point(200, 177);
+            this.comboBox2.Name = "comboBox2";
+            this.comboBox2.Size = new System.Drawing.Size(185, 24);
+            this.comboBox2.TabIndex = 20;
+            // 
+            // comboBox1
+            // 
+            this.comboBox1.BackColor = System.Drawing.SystemColors.InactiveCaption;
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Location = new System.Drawing.Point(200, 111);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(185, 24);
+            this.comboBox1.TabIndex = 4;
+            this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
             // 
             // textBox12
             // 
@@ -405,15 +295,6 @@
             this.textBox_price.Size = new System.Drawing.Size(185, 22);
             this.textBox_price.TabIndex = 17;
             // 
-            // textBox_postavka
-            // 
-            this.textBox_postavka.BackColor = System.Drawing.SystemColors.WindowFrame;
-            this.textBox_postavka.Location = new System.Drawing.Point(200, 176);
-            this.textBox_postavka.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.textBox_postavka.Name = "textBox_postavka";
-            this.textBox_postavka.Size = new System.Drawing.Size(185, 22);
-            this.textBox_postavka.TabIndex = 16;
-            // 
             // textBox_kolvo
             // 
             this.textBox_kolvo.BackColor = System.Drawing.SystemColors.WindowFrame;
@@ -422,15 +303,7 @@
             this.textBox_kolvo.Name = "textBox_kolvo";
             this.textBox_kolvo.Size = new System.Drawing.Size(185, 22);
             this.textBox_kolvo.TabIndex = 15;
-            // 
-            // textBox_type_of_product
-            // 
-            this.textBox_type_of_product.BackColor = System.Drawing.SystemColors.WindowFrame;
-            this.textBox_type_of_product.Location = new System.Drawing.Point(200, 114);
-            this.textBox_type_of_product.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.textBox_type_of_product.Name = "textBox_type_of_product";
-            this.textBox_type_of_product.Size = new System.Drawing.Size(185, 22);
-            this.textBox_type_of_product.TabIndex = 14;
+            this.textBox_kolvo.TextChanged += new System.EventHandler(this.textBox_kolvo_TextChanged);
             // 
             // textBox_id
             // 
@@ -440,6 +313,7 @@
             this.textBox_id.Name = "textBox_id";
             this.textBox_id.Size = new System.Drawing.Size(185, 22);
             this.textBox_id.TabIndex = 13;
+            this.textBox_id.TextChanged += new System.EventHandler(this.textBox_id_TextChanged);
             // 
             // textBox6
             // 
@@ -520,17 +394,38 @@
             // panel1
             // 
             this.panel1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel1.BackgroundImage")));
+            this.panel1.Controls.Add(this.label2);
+            this.panel1.Controls.Add(this.Обновить);
             this.panel1.Controls.Add(this.textBox_search);
             this.panel1.Controls.Add(this.pictureBox2);
             this.panel1.Controls.Add(this.button_refresh);
             this.panel1.Controls.Add(this.textBox1);
-            this.panel1.Controls.Add(this.buttonClear);
             this.panel1.Location = new System.Drawing.Point(3, 2);
             this.panel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(959, 87);
             this.panel1.TabIndex = 9;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.BackColor = System.Drawing.Color.LightSalmon;
+            this.label2.Location = new System.Drawing.Point(681, 0);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(47, 16);
+            this.label2.TabIndex = 14;
+            this.label2.Text = "Поиск";
+            // 
+            // Обновить
+            // 
+            this.Обновить.AutoSize = true;
+            this.Обновить.BackColor = System.Drawing.Color.LightSalmon;
+            this.Обновить.Location = new System.Drawing.Point(579, 0);
+            this.Обновить.Name = "Обновить";
+            this.Обновить.Size = new System.Drawing.Size(71, 16);
+            this.Обновить.TabIndex = 13;
+            this.Обновить.Text = "Обновить";
             // 
             // textBox_search
             // 
@@ -545,7 +440,7 @@
             // pictureBox2
             // 
             this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(693, 0);
+            this.pictureBox2.Location = new System.Drawing.Point(671, 18);
             this.pictureBox2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(68, 65);
@@ -557,7 +452,7 @@
             // 
             this.button_refresh.BackColor = System.Drawing.Color.Sienna;
             this.button_refresh.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button_refresh.BackgroundImage")));
-            this.button_refresh.Location = new System.Drawing.Point(621, 0);
+            this.button_refresh.Location = new System.Drawing.Point(582, 18);
             this.button_refresh.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.button_refresh.Name = "button_refresh";
             this.button_refresh.Size = new System.Drawing.Size(67, 65);
@@ -578,17 +473,6 @@
             this.textBox1.Text = "Отдел №1";
             this.textBox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
-            // buttonClear
-            // 
-            this.buttonClear.BackColor = System.Drawing.Color.Sienna;
-            this.buttonClear.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("buttonClear.BackgroundImage")));
-            this.buttonClear.Location = new System.Drawing.Point(544, 0);
-            this.buttonClear.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.buttonClear.Name = "buttonClear";
-            this.buttonClear.Size = new System.Drawing.Size(71, 65);
-            this.buttonClear.TabIndex = 8;
-            this.buttonClear.UseVisualStyleBackColor = false;
-            // 
             // Tabs
             // 
             this.Tabs.Controls.Add(this.tabPage2);
@@ -603,10 +487,10 @@
             // 
             this.pictureBox1.BackColor = System.Drawing.SystemColors.ControlDark;
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(371, 0);
+            this.pictureBox1.Location = new System.Drawing.Point(312, 0);
             this.pictureBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(251, 50);
+            this.pictureBox1.Size = new System.Drawing.Size(329, 56);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 3;
             this.pictureBox1.TabStop = false;
@@ -619,15 +503,12 @@
             this.ClientSize = new System.Drawing.Size(967, 681);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.Tabs);
-            this.Controls.Add(this.menuStrip1);
-            this.MainMenuStrip = this.menuStrip1;
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "Form1";
-            this.Text = "Form1";
+            this.Text = "LeoText";
             this.Load += new System.EventHandler(this.Form1_Load);
-            this.menuStrip1.ResumeLayout(false);
-            this.menuStrip1.PerformLayout();
             this.tabPage2.ResumeLayout(false);
+            this.panel4.ResumeLayout(false);
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
             this.panel2.ResumeLayout(false);
@@ -640,48 +521,22 @@
             this.Tabs.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
         #endregion
-
-        private System.Windows.Forms.MenuStrip menuStrip1;
-        private System.Windows.Forms.ToolStripMenuItem файлToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem создатьToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem открытьToolStripMenuItem;
-        private System.Windows.Forms.ToolStripSeparator toolStripSeparator;
-        private System.Windows.Forms.ToolStripMenuItem сохранитьToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem сохранитькакToolStripMenuItem;
-        private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;
-        private System.Windows.Forms.ToolStripMenuItem печатьToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem предварительныйпросмотрToolStripMenuItem;
-        private System.Windows.Forms.ToolStripSeparator toolStripSeparator2;
-        private System.Windows.Forms.ToolStripMenuItem выходToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem правкаToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem отменадействияToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem отменадействияToolStripMenuItem1;
-        private System.Windows.Forms.ToolStripSeparator toolStripSeparator3;
-        private System.Windows.Forms.ToolStripMenuItem вырезатьToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem копироватьToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem вставкаToolStripMenuItem;
-        private System.Windows.Forms.ToolStripSeparator toolStripSeparator4;
-        private System.Windows.Forms.ToolStripMenuItem выделитьвсеToolStripMenuItem;
         private System.Windows.Forms.TabPage tabPage2;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.TabControl Tabs;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Button buttonClear;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.TextBox textBox_search;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.Button button_refresh;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.TextBox textBox_price;
-        private System.Windows.Forms.TextBox textBox_postavka;
         private System.Windows.Forms.TextBox textBox_kolvo;
-        private System.Windows.Forms.TextBox textBox_type_of_product;
         private System.Windows.Forms.TextBox textBox_id;
         private System.Windows.Forms.TextBox textBox6;
         private System.Windows.Forms.TextBox textBox5;
@@ -696,6 +551,15 @@
         private System.Windows.Forms.Button button_change;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button button_new_sign;
+        private System.Windows.Forms.Label Обновить;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Button import;
+        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox comboBox2;
+        private System.Windows.Forms.Panel panel4;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Button button_make_new_postavka_product;
+        private System.Windows.Forms.Button button1;
     }
 }
 
