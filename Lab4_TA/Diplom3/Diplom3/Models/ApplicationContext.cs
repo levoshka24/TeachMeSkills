@@ -5,6 +5,7 @@ namespace Diplom3.Models
 {
     public class ApplicationContext : DbContext
     { 
+        //список экзмепляров класса,который сопоставляется с таблицкй в бд
         public DbSet<PhoneConsult> Phones { get; set; }
         public DbSet<UserLogIn> UserLogIns { get; set; }
         public ApplicationContext(DbContextOptions<ApplicationContext> options) : base(options)
@@ -14,14 +15,14 @@ namespace Diplom3.Models
         //protected override void OnModelCreating(ModelBuilder modelBuilder)
         //{
         //    modelBuilder.Entity<PhoneConsult>().HasData(
-        //        new PhoneConsult {Id = 1, PhoneNumber = "+375447498228"}
+        //        new PhoneConsult { Id = 1, PhoneNumber = "+375447498228" }
         //      );
         //}
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             modelBuilder.Entity<UserLogIn>().HasData(
-                new UserLogIn { Id = 1,Email = "admin", Password = "admin"  }
+                new UserLogIn { Id = 1, Email = "admin", Password = "admin" }
               );
         }
     }
-}
+    }

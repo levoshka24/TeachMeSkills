@@ -1,0 +1,41 @@
+﻿
+@model List<PhoneConsult>;
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+
+    <meta charset="UTF-8">
+   
+    <link rel="stylesheet" href="~/css/Admin.css" type="text/css">
+</head>
+<body>
+    <style>
+        body {
+            background-color: black;
+        }
+    </style>
+    <h1 class="admin">Добро пожаловать в админку</h1>
+   <table class="table">
+       <tr>
+           <th>Id</th>
+           <th>PhoneNumber</th>
+       </tr>
+       
+            
+       
+       @foreach(var p in Model)
+       {
+           <tr>
+               <td>@p.Id</td>
+               <td>@p.PhoneNumber</td>
+           </tr>
+           
+       }
+   </table>
+   <div class="admin_block">
+       <img src="~/img/admin.jpg" />
+       <h2>Login: Admin</h2>
+       <h2>Password: Admin</h2>
+   </div>
+</body>
+</html>

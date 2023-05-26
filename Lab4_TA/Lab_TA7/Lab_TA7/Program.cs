@@ -3,7 +3,7 @@
 internal class Program
 {
     static void InsertionSort(int[] arr, int n, out int count)
-    {
+     {
 
         count = 1;
         if (n <= 1)
