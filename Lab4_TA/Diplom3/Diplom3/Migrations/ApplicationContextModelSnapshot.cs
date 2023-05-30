@@ -21,7 +21,7 @@ namespace Diplom3.Migrations
 
             SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder);
 
-            modelBuilder.Entity("Diplom3.Models.UserLogIn", b =>
+            modelBuilder.Entity("Diplom3.Models.Course", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
@@ -29,24 +29,19 @@ namespace Diplom3.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
 
-                    b.Property<string>("Email")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("Password")
+                    b.Property<string>("Name")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.HasKey("Id");
 
-                    b.ToTable("UserLogIns");
+                    b.ToTable("Courses");
 
                     b.HasData(
                         new
                         {
                             Id = 1,
-                            Email = "admin",
-                            Password = "admin"
+                            Name = "C#"
                         });
                 });
 #pragma warning restore 612, 618

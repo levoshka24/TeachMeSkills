@@ -18,40 +18,41 @@ namespace Diplom3.Controllers
         {
             return View();
         }
-        [HttpPost]
-        public IActionResult Log_in(UserLogIn user)
-        {
-                string admin = "admin";
-                string password = "admin";
-                var data = db.UserLogIns.Where(s => s.Email.Equals(user.Email) && s.Password.Equals(user.Password)).ToList();
-                var data2 = db.UserLogIns.Where(s => s.Email.Equals(admin) && s.Password.Equals(password)).ToList();
-                if (data2.Count > 0)
-                {
-                    return RedirectToAction("Admin");
+        //[HttpPost]
+        //public IActionResult Log_in(UserLogIn user)
+        //{
+        //    string admin = "admin";
+        //    string password = "admin";
+        //    var data = db.UserLogIns.Where(s => s.Email.Equals(user.Email) && s.Password.Equals(user.Password)).ToList();
+        //    var data2 = db.UserLogIns.Where(s => s.Email.Equals(admin) && s.Password.Equals(password)).ToList();
+        //    if (data2.Count > 0)
+        //    {
+        //        return RedirectToAction("Admin");
 
-                }
-                if (data.Count > 0)
-                {
-                    return RedirectToAction("Tutor");
-                }
-                else
-                {
-                    return RedirectToAction("Index");
-                }
-                
-                
-                
-            
-            return View();
-        }
+        //    }
+        //    if (data.Count > 0)
+        //    {
+        //        return RedirectToAction("Tutor");
+        //    }
+        //    else
+        //    {
+        //        return RedirectToAction("Index");
+        //    }
+
+
+
+
+        //    return View();
+        //}
         public IActionResult Index()
         {
             return View();
         }
         public IActionResult Admin()
         {
-            var phones_consult = db.Phones.ToList();
-            return View(phones_consult);
+            //var phones_consult = db.Phones.ToList();
+            //return View(phones_consult);
+            return View();
         }
         public IActionResult Tutor()
         {
@@ -62,25 +63,25 @@ namespace Diplom3.Controllers
         {
             return View();
         }
-        [HttpPost]
-        public IActionResult Course_main(PhoneConsult phone)
-        {
-            db.Phones.Add(phone);
-            db.SaveChanges();
-            return View();
-        }
+        //[HttpPost]
+        //public IActionResult Course_main(PhoneConsult phone)
+        //{
+        //    db.Phones.Add(phone);
+        //    db.SaveChanges();
+        //    return View();
+        //}
         [HttpGet]
         public IActionResult Registration()
         {
             return View();
         }
-        [HttpPost]
-        public IActionResult Registration(UserLogIn user)
-        {
-            db.UserLogIns.Add(user);
-            db.SaveChanges();
-            return View();
-        }
+        //[HttpPost]
+        //public IActionResult Registration(UserLogIn user)
+        //{
+        //   // db.UserLogIns.Add(user);
+        //    //db.SaveChanges();
+        //    return View();
+        //}
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
         public IActionResult Error()

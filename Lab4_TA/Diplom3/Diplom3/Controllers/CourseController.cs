@@ -17,6 +17,10 @@ namespace Diplom3.Controllers
         {
             return View();
         }
+        public IActionResult Sharp()
+        {
+            return View();
+        }
         public IActionResult Course_online()
         { 
             return View();
