@@ -279,6 +279,7 @@ namespace Course3
 
         private void button_new_sign_Click(object sender, EventArgs e)
         {
+            this.Hide();
             new_sign form = new new_sign();
             form.Show();
         }
@@ -319,7 +320,7 @@ namespace Course3
 
         private void button_make_new_postavka_product_Click(object sender, EventArgs e)
         {
-            
+            this.Hide();
             var NewPost = new NewSign_Postavka();
             NewPost.Show();
            
@@ -327,7 +328,7 @@ namespace Course3
 
         private void button1_Click_1(object sender, EventArgs e)
         {
-            
+            this.Hide();
             var prod = new NewSign_Product();
             prod.Show();
            

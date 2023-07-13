@@ -45,6 +45,8 @@ namespace Course3
                 MessageBox.Show("Запись создана", "Успешно");
                 
                 this.Hide();
+                var main_frm = new Form1();
+                main_frm.ShowDialog();
                 
             }
             else

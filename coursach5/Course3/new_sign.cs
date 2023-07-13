@@ -97,6 +97,8 @@ namespace Course3
         private void button_save_Click(object sender, EventArgs e)
         {
             SaveBd();
+            var frm_main = new Form1();
+            frm_main.ShowDialog();
 
         }
 
@@ -113,14 +115,16 @@ namespace Course3
            
             var frm = new New_Ptoduct2();
             frm.Show();
+            this.Hide();
         }
 
         private void button_add_postavka_Click(object sender, EventArgs e)
         {
-            
+            this.Hide();
             var frm = new New_Postavka2();
             
             frm.Show();
+
         }
     }
 }

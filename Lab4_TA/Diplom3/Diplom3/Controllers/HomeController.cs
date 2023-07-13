@@ -1,6 +1,7 @@
 ﻿using Diplom3.Models;
 using Microsoft.AspNetCore.Mvc;
 using System.Diagnostics;
+using System.Dynamic;
 
 namespace Diplom3.Controllers
 {
@@ -44,32 +45,52 @@ namespace Diplom3.Controllers
 
         //    return View();
         //}
-        public IActionResult Index()
+        [HttpGet]
+        public IActionResult AddComment()
         {
             return View();
         }
+        [HttpPost]
+        public IActionResult AddComment(Comment com)
+        {
+            db.Comments.Add(com);
+            db.SaveChanges();
+            return View();
+        }
+
+        public IActionResult Commentaries()
+        {
+            var comm = db.Comments.ToList();
+            return View(comm);
+        }
+
+        [HttpGet]
         public IActionResult Admin()
         {
-            //var phones_consult = db.Phones.ToList();
-            //return View(phones_consult);
-            return View();
+            dynamic model = new ExpandoObject();
+            model.PhoneConsults = db.Phones.ToList();
+            model.Courses = db.Courses.ToList();
+
+            return View(model);
         }
+        
         public IActionResult Tutor()
         {
             return View();
         }
+
         [HttpGet]
         public IActionResult Course_main()
         {
             return View();
         }
-        //[HttpPost]
-        //public IActionResult Course_main(PhoneConsult phone)
-        //{
-        //    db.Phones.Add(phone);
-        //    db.SaveChanges();
-        //    return View();
-        //}
+        [HttpPost]
+        public IActionResult Course_main(PhoneConsult phone)
+        {
+            db.Phones.Add(phone);
+            db.SaveChanges();
+            return View();
+        }
         [HttpGet]
         public IActionResult Registration()
         {
@@ -78,8 +99,8 @@ namespace Diplom3.Controllers
         //[HttpPost]
         //public IActionResult Registration(UserLogIn user)
         //{
-        //   // db.UserLogIns.Add(user);
-        //    //db.SaveChanges();
+        //    db.UserLogIns.Add(user);
+        //    db.SaveChanges();
         //    return View();
         //}
 

@@ -29,7 +29,7 @@
     <section class="skrollable skrollable-between u-align-center u-clearfix u-container-align-center u-image u-shading u-section-1" src="" id="sec-c8b7" data-image-width="1280" data-image-height="853">
       <div class="u-clearfix u-sheet u-sheet-1">
         <h1 class="u-align-center u-text u-text-1" data-animation-name="customAnimationIn" data-animation-duration="1750" data-animation-delay="500">FULL-BRAINS</h1>
-        <a href="https://nicepage.studio" class="u-active-palette-2-base u-align-center u-border-2 u-border-active-palette-2-base u-border-hover-palette-2-base u-border-palette-2-base u-btn u-button-style u-hover-palette-2-base u-none u-text-active-black u-text-body-alt-color u-text-hover-black u-btn-1" data-animation-name="customAnimationIn" data-animation-duration="1500" data-animation-delay="500">НАШИ КУРСЫ</a>
+        <a asp-controller="Home" asp-action="Course_main" class="u-active-palette-2-base u-align-center u-border-2 u-border-active-palette-2-base u-border-hover-palette-2-base u-border-palette-2-base u-btn u-button-style u-hover-palette-2-base u-none u-text-active-black u-text-body-alt-color u-text-hover-black u-btn-1" data-animation-name="customAnimationIn" data-animation-duration="1500" data-animation-delay="500">ГЛАВНАЯ</a>
       </div>
     </section>
     <section class="u-align-center u-black u-clearfix u-container-align-center u-section-2" id="carousel_f80b">
@@ -115,12 +115,14 @@
           </div>
         </div>
         <p class="u-align-center u-text u-text-default u-text-14">FULL-BRAINS</p>
+        
       </div>
     </section>
     <section class="u-align-center u-clearfix u-image u-shading u-section-3" id="sec-0ab5" data-image-width="1280" data-image-height="854">
       <div class="u-clearfix u-sheet u-valign-middle-sm u-valign-middle-xs u-sheet-1"><span class="u-file-icon u-icon u-text-palette-2-base u-icon-1" data-animation-name="customAnimationIn" data-animation-duration="1000"><img src="~/img/1077093-751aeb25.png" alt=""></span>
-        <h2 class="u-text u-text-1" data-animation-name="slideIn" data-animation-duration="2000" data-animation-direction="Left"> See more, follow us on</h2>
-        <h3 class="u-text u-text-body-alt-color u-text-2" data-animation-name="customAnimationIn" data-animation-duration="1500"> Instagram <a href="https://nicepage.one" class="u-active-none u-border-none u-btn u-button-link u-button-style u-hover-none u-none u-text-active-white u-text-hover-white u-text-palette-2-base u-btn-1" target="_blank">@@</a>full-brains-official
+        <h2 class="u-text u-text-1" data-animation-name="slideIn" data-animation-duration="2000" data-animation-direction="Left">Определились с курсом?</h2>
+            <h3 class="u-text u-text-body-alt-color u-text-2" data-animation-name="customAnimationIn" data-animation-duration="1500">
+                <a asp-action="SelectCourse" class="u-active-none u-border-none u-btn u-button-link u-button-style u-hover-none u-none u-text-active-white u-text-hover-white u-text-palette-2-base u-btn-1" target="_blank"> Запишитесь на курс,нажав на ссылку</a>
         </h3>
       </div>
     </section>
