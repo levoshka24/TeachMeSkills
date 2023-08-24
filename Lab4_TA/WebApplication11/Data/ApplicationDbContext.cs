@@ -13,6 +13,7 @@ namespace WebApplication11.Data
             Database.EnsureCreated();
         }
         public DbSet<PhoneConsult> Phones { get; set; }
+        public DbSet<Tutor> Tutors { get; set; }
         public DbSet<NewCourse> NewCourses { get; set; }
         public DbSet<Course> Courses { get; set; }
         public DbSet<Comment> Comments { get; set; }

@@ -1,0 +1,77 @@
+﻿@model List<Film>;
+<!DOCTYPE html>
+<html style="font-size: 16px;" lang="ru">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="utf-8">
+    <meta name="keywords" content="​Design Your Home, Your Way, ​Build Gre​at Products, ​​Complete Interior Design Service, Contacts">
+    <meta name="description" content="">
+    <title>Страница 1</title>
+    <link rel="stylesheet" href="~/css/film.css" media="screen">
+    <link rel="stylesheet" href="~/css/film1.css" media="screen">
+    <script class="u-script" type="text/javascript" src="jquery.js" defer=""></script>
+    <script class="u-script" type="text/javascript" src="nicepage.js" defer=""></script>
+    <meta name="generator" content="Nicepage 5.16.3, nicepage.com">
+    <link id="u-theme-google-font" rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i|Open+Sans:300,300i,400,400i,500,500i,600,600i,700,700i,800,800i">
+    <link id="u-page-google-font" rel="stylesheet" href="https://fonts.googleapis.com/css?family=Oswald:200,300,400,500,600,700">
+
+
+
+
+   
+    <meta name="theme-color" content="#478ac9">
+    <meta property="og:title" content="Страница 1">
+    <meta property="og:type" content="website">
+    <meta data-intl-tel-input-cdn-path="intlTelInput/">
+</head>
+<body class="u-body u-xl-mode" data-lang="ru">
+    
+    <section class="u-clearfix u-image u-section-1" id="carousel_e184" data-image-width="1280" data-image-height="853">
+        <div class="u-clearfix u-sheet u-sheet-1">
+            <div class="u-container-align-left u-container-style u-group u-shape-rectangle u-white u-group-1">
+                <div class="u-container-layout u-valign-middle u-container-layout-1">
+                    <h1 class="u-align-left u-text u-text-1">Каталог фильмов</h1>
+                    <p class="u-align-left u-text u-text-2">Здесь вы можете почитать всю актуальную информацию о фильмах</p>
+                    <a asp-action="AddFilm" class="u-align-left u-border-2 u-border-black u-btn u-button-style u-hover-black u-none u-text-active-white u-text-black u-text-hover-white u-btn-1">ДОБАВИТЬ ФИЛЬМ</a>
+                </div>
+            </div>
+        </div>
+    </section>
+    @foreach(var p in Model){<section class="u-align-center u-clearfix u-section-2" id="carousel_f5ee">
+        <div class="u-clearfix u-sheet u-valign-middle-lg u-sheet-1">
+            <!--product--><!--product_options_json--><!--{"source":""}--><!--/product_options_json--><!--product_item-->
+            <div class="u-align-center-md u-align-center-sm u-align-center-xs u-container-style u-expanded-width u-grey-5 u-product u-product-1">
+                <div class="u-container-layout u-container-layout-1">
+                    <!--product_image-->
+                    <img src="@p.URL" alt="" class="u-image u-image-default u-product-control u-image-1" data-image-width="750" data-image-height="750"><!--/product_image-->
+                    <div class="u-align-center u-container-style u-expanded-width-md u-group u-shape-rectangle u-white u-group-1">
+                        <div class="u-container-layout u-valign-middle-xl u-valign-middle-xs u-valign-top-lg u-valign-top-md u-valign-top-sm u-container-layout-2">
+                            <!--product_title-->
+                            <h2 class="u-product-control u-text u-text-default u-text-1">
+                                <a class="u-product-title-link" href="#"><!--product_title_content-->@p.Name<!--/product_title_content--></a>
+                            </h2><!--/product_title--><!--product_price-->
+                            <div class="u-product-control u-product-price u-product-price-1">
+                                <div class="u-price-wrapper u-spacing-10">
+                                    <!--product_old_price-->
+                                    <div class="u-hide-price u-old-price" style="text-decoration: line-through !important;" wfd-invisible="true"><!--product_old_price_content-->$12<!--/product_old_price_content--></div><!--/product_old_price--><!--product_regular_price-->
+                                    <div class="u-price" style="font-size: 15; "><!--product_regular_price_content-->@p.Description<!--/product_regular_price_content--></div><!--/product_regular_price-->
+                                </div>
+                            </div><!--/product_price--><!--product_content-->
+                            <div class="u-product-control u-product-desc u-text u-text-grey-15 u-text-2">
+                                <!--product_content_content-->
+                                <p>@p.Actors</p><!--/product_content_content-->
+                            </div><!--/product_content--><!--product_button--><!--options_json--><!--{"clickType":"add-to-cart","content":"Add to Cart"}--><!--/options_json-->
+                            
+                        </div>
+                    </div>
+                </div>
+            </div><!--/product_item--><!--/product-->
+        </div>
+    </section>
+    }
+
+
+
+  
+</body>
+</html>

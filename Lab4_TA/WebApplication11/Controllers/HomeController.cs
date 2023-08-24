@@ -4,6 +4,7 @@ using System.Diagnostics;
 using System.Dynamic;
 using WebApplication11.Data;
 using System.Reflection.Metadata;
+using System.Xml.Linq;
 
 namespace WebApplication11.Controllers
 {
@@ -29,6 +30,14 @@ namespace WebApplication11.Controllers
             db.SaveChanges();
             return View();
         }
+        
+        public IActionResult ShablonCourse(string message)
+        {
+            var mass = db.NewCourses.Where(u => u.Name == message).ToList();
+
+            return View(mass);
+        }
+        
 
         public IActionResult Commentaries()
         {
@@ -48,6 +57,32 @@ namespace WebApplication11.Controllers
         
         public IActionResult Tutor()
         {
+            var tutors = db.Tutors.ToList();
+            return View(tutors) ;
+        }
+        [HttpGet]
+        public IActionResult AddTutor()
+        {
+            return View();
+        }
+        [HttpPost]
+        public IActionResult AddTutor(Tutor tutor)
+        {
+            db.Tutors.Add(tutor);
+            db.SaveChanges();
+            return View();
+        }
+        [HttpGet]
+        public IActionResult DelTutor()
+        {
+            return View();
+        }
+        [HttpPost]
+        public IActionResult DelTutor(string name)
+        {
+            var tutor = db.Tutors.Where(u => u.Name == name).ToList();
+            db.Remove(tutor);
+            db.SaveChanges();
             return View();
         }
 
@@ -97,14 +132,18 @@ namespace WebApplication11.Controllers
         [HttpGet]
         public IActionResult AddCourse()
         {
+           
             return View();
         }
         [HttpPost]
         public IActionResult AddCourse(NewCourse crs)
         {
+            var result = crs.Name;
+            
             db.NewCourses.Add(crs);
             db.SaveChanges();
-            return View();
+            return RedirectToAction("ShablonCourse", new { message = result });
+
         }
         [HttpGet]
         public IActionResult DelCourseUser()

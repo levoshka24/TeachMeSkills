@@ -1,4 +1,5 @@
-﻿<!DOCTYPE html>
+﻿@model List<AddTovar>;
+<!DOCTYPE html>
 <html style="font-size: 16px;" lang="ru"><head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta charset="utf-8">
@@ -117,6 +118,14 @@
               <h4 class="u-align-center u-custom-font u-font-roboto u-text u-text-15"> Салфетка пасхальная 30x60 арт. СФ-001 рис.14</h4>
             </div>
           </div>
+          @foreach(var p in Model){
+                    <div class="u-container-align-center u-container-style u-list-item u-repeater-item u-shape-rectangle u-video-cover u-white u-list-item-4" data-animation-name="customAnimationIn" data-animation-duration="1500">
+                        <div class="u-container-layout u-similar-container u-container-layout-5">
+                            <img class="u-expanded-width u-image u-image-default u-image-4" src="@p.URL" alt="" data-image-width="800" data-image-height="600" data-animation-name="customAnimationIn" data-animation-duration="1500" data-animation-delay="500">
+                            <h4 class="u-align-center u-custom-font u-font-roboto u-text u-text-5">@p.Description </h4>
+                        </div>
+                    </div>
+          }
         </div>
       </div>
     </section>

@@ -1,0 +1,98 @@
+﻿@model Commentor;
+<!DOCTYPE html>
+<html style="font-size: 16px;" lang="ru">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="utf-8">
+    <meta name="keywords" content="Gallery, ​Turn your ideas to live web experiences, Our Projects, ​Turn your ideas to live web experiences">
+    <meta name="description" content="">
+    <title>Страница 3</title>
+    <link rel="stylesheet" href="~/css/AddComment1.css" media="screen">
+    <link rel="stylesheet" href="~/css/AddComment2.css" media="screen">
+    <script class="u-script" type="text/javascript" src="~/js/AddComment1.js" defer=""></script>
+    <script class="u-script" type="text/javascript" src="~/js/AddComment2.js" defer=""></script>
+    <meta name="generator" content="Nicepage 5.9.10, nicepage.com">
+    <meta name="referrer" content="origin">
+    <link id="u-theme-google-font" rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i|Open+Sans:300,300i,400,400i,500,500i,600,600i,700,700i,800,800i">
+    <link id="u-page-google-font" rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i">
+
+
+
+    <script type="application/ld+json">
+        {
+                "@@context": "http://schema.org",
+                "@@type": "Organization",
+                "name": "",
+                "logo": "images/business-gb1578e740_640.png"
+        }</script>
+    <meta name="theme-color" content="#478ac9">
+    <meta property="og:title" content="Страница 3">
+    <meta property="og:type" content="website">
+    <meta data-intl-tel-input-cdn-path="intlTelInput/">
+</head>
+<body class="u-body u-xl-mode" data-lang="ru">
+    <section class="u-clearfix u-container-align-center u-image u-shading u-section-1" id="sec-42c0" data-image-width="1280" data-image-height="787">
+        <div class="u-clearfix u-sheet u-valign-middle u-sheet-1">
+            <div class="u-align-left u-border-20 u-border-black u-container-align-center u-container-style u-group u-opacity u-opacity-25 u-white u-group-1">
+                <div class="u-container-layout u-valign-middle u-container-layout-1">
+                    <h2 class="u-align-center u-custom-font u-font-montserrat u-text u-text-body-alt-color u-text-1">ОТЗЫВЫ</h2>
+                    <p class="u-align-center u-text u-text-body-alt-color u-text-2">Здесь вы можете оставить ваш отзыв о пройденном курсе</p>
+                    <a href="https://nicepage.com/css-templates" class="u-border-2 u-border-black u-btn u-button-style u-hover-black u-none u-text-black u-text-hover-white u-btn-1">Read More</a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="u-clearfix u-section-2" id="carousel_600d">
+        <div class="u-clearfix u-sheet u-valign-middle-lg u-valign-middle-xl u-sheet-1">
+            <div class="u-clearfix u-expanded-width u-layout-wrap u-layout-wrap-1">
+                <div class="u-layout">
+                    <div class="u-layout-row">
+                        <div class="u-container-style u-layout-cell u-size-30 u-layout-cell-1">
+                            <div class="u-container-layout u-valign-top-sm u-valign-top-xs u-container-layout-1">
+                                <h2 class="u-text u-text-default u-text-1">Оставте ваш отзыв</h2>
+                                <div class="u-black u-container-style u-group u-radius-50 u-shape-round u-group-1">
+                                    <div class="u-container-layout u-valign-middle u-container-layout-2">
+                                        <h5 class="u-text u-text-default u-text-2">Техподдержка работает с:</h5>
+                                        <p class="u-text u-text-default u-text-3">
+                                            Mon - Fri: 09 - 07​<br>Сб - Вс: Закрыто
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="u-container-style u-layout-cell u-size-30 u-layout-cell-2">
+                            <div class="u-container-layout u-valign-bottom u-container-layout-3">
+                                <div class="u-expanded-width u-form u-grey-5 u-radius-50 u-form-1">
+                                    <form asp-action="AddComment" asp-controller="Home" style="padding: 30px;">
+                                        
+                                        <div class="u-form-group u-form-name u-label-top">
+                                            <label for="name-5a14" class="u-label">Имя фильма</label>
+                                            <input type="text" asp-for="FilmName" placeholder="Enter your Name" id="name-5a14" class="u-border-none u-grey-5 u-input u-input-rectangle u-radius-7 u-input-2" required="">
+                                        </div>
+                                        <div class="u-form-group u-form-name u-label-top">
+                                            <label for="name-5a14" class="u-label">Ваше Имя:</label>
+                                            <input type="text" asp-for="Name" placeholder="Enter your Name" id="name-5a14" class="u-border-none u-grey-5 u-input u-input-rectangle u-radius-7 u-input-2" required="">
+                                        </div>
+                                        <div class="u-form-email u-form-group u-label-top">
+                                            <label for="email-5a14" class="u-label">Ваш отзыв</label>
+                                            <textarea asp-for="Commentari" placeholder="Оставляйте свой отзыв" rows="4" cols="50" id="message-b064" class="u-border-none u-input u-input-rectangle u-radius-20" required=""></textarea>
+                                        </div>
+
+                                        
+                                        <input type="submit" value="Отправить" >
+
+
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+</body>
+</html>

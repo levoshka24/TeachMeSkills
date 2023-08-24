@@ -1,4 +1,5 @@
-﻿<!DOCTYPE html>
+﻿@model List<AddTovar>;
+<!DOCTYPE html>
 <html style="font-size: 16px;" lang="ru"><head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta charset="utf-8">
@@ -111,6 +112,17 @@
                 <p class="u-gallery-text"></p>
               </div>
             </div>
+            @foreach(var p in Model){
+                        <div class="u-effect-fade u-gallery-item">
+                            <div class="u-back-slide" data-image-width="640" data-image-height="534">
+                                <img class="u-back-image u-expanded" src="@p.URL">
+                            </div>
+                            <div class="u-over-slide u-shading u-over-slide-9">
+                                <h3 class="u-gallery-heading"></h3>
+                                <p class="u-gallery-text"></p>
+                            </div>
+                        </div>
+            }
           </div>
         </div>
       </div>

@@ -50,6 +50,23 @@ namespace Ritual.Controllers
         }
         public IActionResult Salfetki()
         {
+            var table_salfetki = db.Products.Where(u => u.Name == "Пасхальные салфетки").ToList();
+            return View(table_salfetki);
+        }
+        [HttpGet]
+        public IActionResult AddProduct()
+        {
+            return View();
+        }
+        [HttpPost]
+        public IActionResult AddProduct(Product pr)
+        {
+            db.Products.Add(pr);
+            db.SaveChanges();
+            return RedirectToAction("Admin");
+        }
+        public IActionResult Admin()
+        {
             return View();
         }
         public IActionResult Kitchen()
